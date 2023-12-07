@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\VyberRestauraciController;
+use App\Http\Controllers\Controller;
+use App\Models\Restaurace;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +23,7 @@ Route::get('/cas', function () {
     return view('cas');
 });
 
-Route::get('/vyber_jidla', 
-[VyberRestauraciController::class, 'konkretniRestaurace']);
+Route::get('/vyber_jidla', /* [Controller::class, 'vyber'] */function (){
+    $restaurace = Restaurace::all();
+    return View('vyber_jidla', ['restaurace' => $restaurace]);
+});
