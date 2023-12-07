@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VyberRestauraciController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +15,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('zakladni_udaje');
 });
+
+Route::get('/cas', function () {
+    return view('cas');
+});
+
+Route::get('/vyber_jidla', 
+[VyberRestauraciController::class, 'konkretniRestaurace']);
