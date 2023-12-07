@@ -1,0 +1,61 @@
+.logo>img {
+    width: 10%;
+}
+
+.hlavicka {
+    background-color: greenyellow;
+}
+
+.telo {
+    background-color: aqua;
+}
+
+.nadpis {
+    text-align: center;
+    height: 50px;
+    width: 250px;
+    background-color: gray;
+}
+
+.input {
+    height: 50px;
+    margin: 20px;
+}
+
+.dalsi {
+    padding: 10px;
+    margin-left: 20px;
+    background-color: whitesmoke;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.dalsi:hover {
+    color: white;
+    background-color: gray;
+}
+
+.karta {
+    margin-top: 20px;
+    margin-right: 20px;
+    margin-left: 20px;
+    border: 2px solid yellow;
+    background-color: yellow;
+    text-align: center;
+}
+
+.karta>img {
+    width: 33%;
+}
+
+.karty {
+    display: flex;
+}
+
+.karta:hover {
+    background-color: yellowgreen;
+}
+
+.karta:active {
+    background-color: red;
+}

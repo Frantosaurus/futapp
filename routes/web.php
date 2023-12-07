@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Controller;
+use App\Models\Restaurace;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,5 +16,14 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('zakladni_udaje');
+});
+
+Route::get('/cas', function () {
+    return view('cas');
+});
+
+Route::get('/vyber_jidla', /* [Controller::class, 'vyber'] */function (){
+    $restaurace = Restaurace::all();
+    return View('vyber_jidla', ['restaurace' => $restaurace]);
 });
