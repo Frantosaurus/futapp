@@ -23,6 +23,34 @@ Route::get('/cas', function () {
     return view('cas');
 });
 
+Route::get('/cina', function () {
+    return view('cina');
+});
+
+Route::get('/indie', function () {
+    return view('indie');
+});
+
+Route::get('/italie', function () {
+    return view('italie');
+});
+
+Route::get('/cesko', function () {
+    return view('cesko');
+});
+
+Route::get('/kebab', function () {
+    return view('kebab');
+});
+
+Route::get('/mexico', function () {
+    return view('mexico');
+});
+
+Route::get('/fastfood', function () {
+    return view('fastfood');
+});
+
 Route::get('/vyber_jidla', /* [Controller::class, 'vyber'] */function (){
     $restaurace = Restaurace::all();
     return View('vyber_jidla', ['restaurace' => $restaurace]);
