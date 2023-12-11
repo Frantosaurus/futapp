@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Models\Restaurace;
-
+use App\Models\users;
+use Illuminate\Http\Request;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -16,12 +17,25 @@ use App\Models\Restaurace;
 */
 
 Route::get('/', function () {
-    return view('zakladni_udaje');
+    $typJidla = Restaurace::all();
+    return view('zakladni_udaje', ['typJidla' => $typJidla]);
 });
+
+Route::post('/', function (){
+    $uzivatel = new users();
+
+    $uzivatel->name = request("name");
+    $uzivatel->last_name = request("last_name");
+    $uzivatel->type_of_food = request("type_of_food");
+    $uzivatel->specific_restaurant = request("specific_restaurant");
+
+    $uzivatel->save();
+    return redirect("/")->with('mssg', 'Potvrzeno');
+})->name("udaje");
 
 Route::get('/cas', function () {
     return view('cas');
-});
+})->name("cas");
 
 Route::get('/cina', function () {
     return view('cina');
