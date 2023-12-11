@@ -23,6 +23,7 @@
 }
 
 .dalsi {
+    margin-bottom: 20px;
     padding: 10px;
     margin-left: 20px;
     background-color: whitesmoke;
@@ -58,4 +59,9 @@
 
 .karta:active {
     background-color: red;
+}
+
+.vyber {
+    margin-left: 20px;
+    margin-bottom: 30px;
 }
