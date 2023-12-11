@@ -12,7 +12,7 @@
                         <input placeholder="Jméno" class="input" name="name">
                     </div>
                     <div class="col-md-6 col-12">
-                        <input placeholder="Příjmení" class="input" name="lastName">
+                        <input placeholder="Příjmení" class="input" name="last_name">
                     </div>
                     <div class="col-md-6 col-12 vyber">
                         <label>Druh jídla</label>
@@ -34,6 +34,7 @@
                     </form>
                 </div>
                 <div class="row">
+                    <p class="mssg">{{ session('mssg')}}
                     <div class="col-auto"><a class="dalsi" href="{{ route('cas') }}">Pokračovat</a></div>
                 </div>
                 <br>
