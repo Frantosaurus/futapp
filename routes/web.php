@@ -65,6 +65,10 @@ Route::get('/fastfood', function () {
     return view('fastfood');
 });
 
+Route::get('/mekong', function () {
+    return view('mekong');
+})->name("mekong");
+
 Route::get('/vyber_jidla', /* [Controller::class, 'vyber'] */function (){
     $restaurace = Restaurace::all();
     return View('vyber_jidla', ['restaurace' => $restaurace]);
