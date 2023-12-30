@@ -25,14 +25,15 @@
                         <div class="zaskrnuiti" style="display: none;">
                             @foreach($typJidla as $konkretni_typJidla)
                                 <label class="typ-popis" data-type-id="{{ $konkretni_typJidla->id }}">{{ $konkretni_typJidla->popis }}</label>
-                                <select name="specific_restaurant[]" class="specific_restaurant" data-type-id="{{ $konkretni_typJidla->id }}">
+                                <select name="specific_restaurant[{{ $konkretni_typJidla->id }}][]" class="specific_restaurant" data-type-id="{{ $konkretni_typJidla->id }}">
                                     <option>Vyber možnost</option>
                                     @foreach($nazevRestaurace as $konkretni_nazevRestaurace)
-                                        @if($konkretni_nazevRestaurace->nazev == $konkretni_typJidla->id)
-                                            <option value="{{ $konkretni_nazevRestaurace->nazev }}">{{ $konkretni_nazevRestaurace->nazev }}</option>
+                                        @if($konkretni_nazevRestaurace->typ == $konkretni_typJidla->id)
+                                            <option value="{{ $konkretni_nazevRestaurace->id }}">{{ $konkretni_nazevRestaurace->nazev }}</option>
                                         @endif
                                     @endforeach
                                 </select>
+                                <label>(nepovinné)</label>
                                 <br>
                             @endforeach
                         </div>
@@ -59,7 +60,7 @@
                 if (checkbox.checked) {
                     var typeId = checkbox.value;
                     var select = document.createElement('select');
-                    select.name = 'specific_restaurant[]';
+                    select.name = 'specific_restaurant[' + typeId + '][]';
                     select.className = 'specific_restaurant';
                     select.dataset.typeId = typeId;
                     var option = document.createElement('option');
@@ -69,7 +70,7 @@
                     @foreach($nazevRestaurace as $konkretni_nazevRestaurace)
                         if ({{$konkretni_nazevRestaurace->typ}} == typeId) {
                             var option = document.createElement('option');
-                            option.value = '{{ $konkretni_nazevRestaurace->typ }}';
+                            option.value = '{{ $konkretni_nazevRestaurace->id }}';
                             option.text = '{{ $konkretni_nazevRestaurace->nazev }}';
                             select.add(option);
                         }
