@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class users extends Model
 {
     //use HasFactory;
+   protected $casts = [
+        "specific_restaurant" => "array",
+        "type_of_food" => "array"
+    ];
 }
