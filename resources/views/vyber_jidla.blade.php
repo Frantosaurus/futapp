@@ -1,7 +1,7 @@
 @extends('sablony.sablona')
 @section('kontent')
         <section>
-            <!-- <div class="telo">
+            <div class="telo">
                 <div class="karty">
                     <div class="karta">
                         <img src="/img/IMG_0033.png">
@@ -50,11 +50,6 @@
                     <div class="col-auto"><a class="dalsi" href="konkretni_jidlo_mexico.html">Je mi to jedno</a></div>
                 </div>
                 <br>
-            </div> -->
-            @foreach($restaurace as $konkterni_restaurace)
-            <div>
-                {{$konkterni_restaurace->typ}}
             </div>
-            @endforeach
         </section>
 @endsection

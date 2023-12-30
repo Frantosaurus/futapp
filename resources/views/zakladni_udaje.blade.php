@@ -15,22 +15,24 @@
                         <input placeholder="Příjmení" class="input" name="last_name">
                     </div>
                     <div class="col-md-6 col-12 vyber">
-                        <label>Druh jídla</label>
-                        <select name="type_of_food" id="type_of_food" name="type_of_food">
-                         @foreach($typJidla as $konkterni_typJidla)
-                            <option>{{$konkterni_typJidla->typ}}</option>  
+
+                    <label>Druh jídla</label><br>
+                        @foreach($typJidla as $konkretni_typJidla)
+                            <br>
+                            <input type="checkbox" class="type_of_food" name="type_of_food" value="{{ $konkretni_typJidla->id }}">{{ $konkretni_typJidla->typ_res }}<br>
+                                    <label>Konkrétní restaurace</label>
+                                <select name="specific_restaurant" class="specific_restaurant">
+                                    <option>Vyber možnost</option>
+                                    @foreach($nazevRestaurace as $konkretni_nazevRestaurace)
+                                        @if($konkretni_nazevRestaurace->typ == $konkretni_typJidla->id)
+                                            <option value="{{ $konkretni_nazevRestaurace->typ }}">{{ $konkretni_nazevRestaurace->nazev }}</option>
+                                        @endif
+                                    @endforeach
+                                </select>
+                                <label>(nepovinné)</label>
+                                <br>
+
                         @endforeach
-                        </select>      
-                    </div>
-                    <div class="col-md-6 col-12 vyber">
-                        <label>Konkétní restaurace</label>
-                        <select name="specific_restaurant" id="specific_restaurant" name="specific_restaurant">
-                            <option>Indie</option>
-                            <option>Čína</option>
-                            <option>Fast food</option>
-                        </select>
-                        <input type="submit" value="Uložit">
-                    </div>
                     </form>
                 </div>
                 <div class="row">

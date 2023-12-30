@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Controller;
 use App\Models\Restaurace;
+use App\Models\typyrestauraci;
 use App\Models\users;
 use Illuminate\Http\Request;
 /*
@@ -17,8 +18,10 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    $typJidla = Restaurace::all();
-    return view('zakladni_udaje', ['typJidla' => $typJidla]);
+    $nazevRestaurace = Restaurace::orderBy("typ")->get();
+    $typJidla = typyrestauraci::all();
+    
+    return view('zakladni_udaje', ['typJidla' => $typJidla, 'nazevRestaurace' => $nazevRestaurace]);
 });
 
 Route::post('/', function (){
