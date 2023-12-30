@@ -15,11 +15,11 @@
                         <input placeholder="Příjmení" class="input" name="last_name">
                     </div>
                     <div class="col-md-6 col-12 vyber">
-
                     <label>Druh jídla</label><br>
                         @foreach($typJidla as $konkretni_typJidla)
                             <br>
                             <input type="checkbox" class="type_of_food" name="type_of_food" value="{{ $konkretni_typJidla->id }}">{{ $konkretni_typJidla->typ_res }}<br>
+                            <div class="zaskrnuiti">
                                     <label>Konkrétní restaurace</label>
                                 <select name="specific_restaurant" class="specific_restaurant">
                                     <option>Vyber možnost</option>
@@ -31,8 +31,10 @@
                                 </select>
                                 <label>(nepovinné)</label>
                                 <br>
-
+                            </div>
                         @endforeach
+                        <input type="submit" value="Uložit">
+                    </div>
                     </form>
                 </div>
                 <div class="row">

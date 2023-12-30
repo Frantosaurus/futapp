@@ -4,43 +4,43 @@
             <div class="telo">
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/Chopstix.png">
+                        <img src="/img/IMG_0033.png">
                         <p>Chopstix</p>
                     </div>
                     <div class="karta">
-                        <img src="/img/Homy Asian Fusion.png">
+                        <img src="/img/IMG_0033.png">
                         <p>Homy Asian Fusion</p>
                     </div>
                     <div class="karta">
-                        <img src="/img/King Sheng Restaurant.png">
+                        <img src="/img/IMG_0033.png">
                         <p>King Sheng Restaurant</p>
                     </div>
                 </div>
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/Lotus.png">
+                        <img src="/img/IMG_0033.png">
                         <p>Lotus</p>
                     </div>
                     <div class="karta">
-                        <img src="/img/Mekong.png">
-                        <p><a href="{{ route('mekong') }}">Mekong</a></p>
+                        <img src="/img/IMG_0033.png">
+                        <p>Mekong</p>
                     </div>
                     <div class="karta">
-                        <img src="/img/SAYAM.png">
+                        <img src="/img/IMG_0033.png">
                         <p>SAYAM</p>
                     </div>
                 </div>
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/U Bílého dráčka.png">
+                        <img src="/img/IMG_0033.png">
                         <p>U Bílého dráčka</p>
                     </div>
                     <div class="karta">
-                        <img src="/img/Victory Asia Restaurant.png">
+                        <img src="/img/IMG_0033.png">
                         <p>Victory Asia Restaurant</p>
                     </div>
                     <div class="karta">
-                        <img src="/img/Zlatý drak.png">
+                        <img src="/img/IMG_0033.png">
                         <p>Zlatý drak</p>
                     </div>
                 </div>
