@@ -1,11 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Controller;
-use App\Models\Restaurace;
-use App\Models\typyrestauraci;
-use App\Models\users;
-use Illuminate\Http\Request;
+use App\Http\Controllers\RestaurantController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,62 +14,39 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::get('/', function () {
-    $nazevRestaurace = Restaurace::orderBy("typ")->get();
-    $typJidla = typyrestauraci::all();
-    
-    return view('zakladni_udaje', ['typJidla' => $typJidla, 'nazevRestaurace' => $nazevRestaurace]);
+Route::get('/', [RestaurantController::class, 'index']);
+Route::post('/', [RestaurantController::class, 'store'])->name("udaje");
+Route::get('/vyber_jidla', [RestaurantController::class, 'vyber_jidla']);
+Route::get('/cas', [RestaurantController::class, 'cas'])->name("cas");
+
+//druhy restaurací
+Route::get('/{type}', [RestaurantController::class, 'showType']);
+
+
+// jednotlivé restaurace
+Route::group([], function () {
+    Route::get('/mekong', [RestaurantController::class, 'mekong'])->name("mekong");
+
 });
 
-Route::post('/', function (){
-    $uzivatel = new users();
 
-    $uzivatel->name = request("name");
-    $uzivatel->last_name = request("last_name");
-    $uzivatel->type_of_food = request("type_of_food");
-    $uzivatel->specific_restaurant = request("specific_restaurant");
 
-    $uzivatel->save();
-    return redirect("/")->with('mssg', 'Potvrzeno');
-})->name("udaje");
 
-Route::get('/cas', function () {
-    return view('cas');
-})->name("cas");
 
-Route::get('/cina', function () {
-    return view('cina');
+
+
+
+
+/*
+//druhy restaurací          (to je zde necháno, kdyby náhodou něco nefungovalo, tak, jak má)
+Route::group([], function () {
+    Route::get('/mexico', [RestaurantController::class, 'mexico']);
+    Route::get('/fastfood', [RestaurantController::class, 'fastfood']);
+    Route::get('/cina', [RestaurantController::class, 'cina']);
+    Route::get('/indie', [RestaurantController::class, 'indie']);
+    Route::get('/italie', [RestaurantController::class, 'italie']);
+    Route::get('/cesko', [RestaurantController::class, 'cesko']);
+    Route::get('/kebab', [RestaurantController::class, 'kebab']);
 });
 
-Route::get('/indie', function () {
-    return view('indie');
-});
-
-Route::get('/italie', function () {
-    return view('italie');
-});
-
-Route::get('/cesko', function () {
-    return view('cesko');
-});
-
-Route::get('/kebab', function () {
-    return view('kebab');
-});
-
-Route::get('/mexico', function () {
-    return view('mexico');
-});
-
-Route::get('/fastfood', function () {
-    return view('fastfood');
-});
-
-Route::get('/mekong', function () {
-    return view('mekong');
-})->name("mekong");
-
-Route::get('/vyber_jidla', /* [Controller::class, 'vyber'] */function (){
-    $restaurace = Restaurace::all();
-    return View('vyber_jidla', ['restaurace' => $restaurace]);
-});
+*/

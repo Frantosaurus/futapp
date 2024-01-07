@@ -23,7 +23,7 @@
                     </div>
                     <div class="karta">
                         <img src="/img/IMG_0033.png">
-                        <p>Mekong</p>
+                        <p><a href="{{ route('mekong') }}">Mekong</a></p>
                     </div>
                     <div class="karta">
                         <img src="/img/IMG_0033.png">
@@ -53,3 +53,4 @@
             </div>
         </section>
         @endsection
+
