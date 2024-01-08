@@ -9,7 +9,12 @@ use Illuminate\Http\Request;
 
 class RestaurantController extends Controller
 {
-    public function index()
+    public function hlavni_stranka()
+    {
+        return view('hlavni_stranka');
+    }
+
+    public function zakladni_udaje()
     {
         $nazevRestaurace = Restaurace::orderBy("typ")->get();
         $typJidla = TypyRestauraci::all();
@@ -17,13 +22,13 @@ class RestaurantController extends Controller
         return view('zakladni_udaje', ['typJidla' => $typJidla, 'nazevRestaurace' => $nazevRestaurace]);
     }
 
-    public function store(Request $request)
+    public function udaje(Request $request)
     {
         $validatedData = $request->validate([
-            'name' => 'required|max:255',
-            'last_name' => 'required|max:255',
-            'type_of_food' => 'required|max:255',
-            'specific_restaurant' => 'required|max:255',
+            'name' => 'required|max:25',
+            'last_name' => 'required|max:25',
+            'type_of_food' => 'required|max:25',
+            'specific_restaurant' => 'required|max:25',
         ]);
     
         $uzivatel = new User();
@@ -38,17 +43,17 @@ class RestaurantController extends Controller
         return redirect("/")->with('mssg', 'Potvrzeno');
     }
 
-    public function vyber_jidla()
-    {
-        $restaurace = Restaurace::all();
-        return view('vyber_jidla', ['restaurace' => $restaurace]);
-    }
 
     public function cas()
     {
         return view('cas');
     }
 
+    public function vyber_jidla()
+    {
+        $restaurace = Restaurace::all();
+        return view('vyber_jidla', ['restaurace' => $restaurace]);
+    }
     
     // jednotlivé restaurace
     public function showType($type)
@@ -56,19 +61,22 @@ class RestaurantController extends Controller
         return view($type);
     }
 
-    // jednotlivé restaurace
-    public function showRestaurant($restaurantName)
-    {
-        return view($restaurantName);
-    }
-
-
+   
 
 
 
     
 
     /*
+
+
+     // jednotlivé restaurace
+    public function showRestaurant($restaurantName)
+    {
+        return view($restaurantName);
+    }
+
+
     //druhy restaurací          (to je zde necháno, kdyby náhodou něco nefungovalo, tak, jak má)
     public function mexico()
     {

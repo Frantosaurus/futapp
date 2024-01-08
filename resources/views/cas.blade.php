@@ -11,7 +11,7 @@
                     <div class="col-md-6 col-12"><input placeholder="Do kdy?" class="input"></div>
                 </div>
                 <div class="row">
-                    <div class="col-auto"><a class="dalsi" href="vyber_jidla.html">Uložit a pokračovat</a></div>
+                    <div class="col-auto"><a class="dalsi" href="{{ url('/vyber_jidla') }}">Uložit a pokračovat</a></div>
                 </div>
                 <br>
             </div>
