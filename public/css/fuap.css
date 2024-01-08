@@ -6,15 +6,28 @@
     background-color: greenyellow;
 }
 
-.telo {
-    background-color: rgb(72, 255, 0);
+.container-fluid {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
 }
+
+
+.telo {
+    background-color: #ff0800;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    color: white;
+}
+
 
 .nadpis {
     text-align: center;
     height: 50px;
     width: 250px;
-    background-color: gray;
+    background-color: #ff0800;
+    color: white;
+    
 }
 
 .input {
@@ -40,8 +53,8 @@
     margin-top: 20px;
     margin-right: 20px;
     margin-left: 20px;
-    border: 2px solid yellow;
-    background-color: yellow;
+    border: 2px solid white;
+    background-color: #ff0800;
     text-align: center;
 }
 
@@ -54,7 +67,7 @@
 }
 
 .karta:hover {
-    background-color: yellowgreen;
+    background-color: #cd0700;
 }
 
 .karta:active {
@@ -101,3 +114,66 @@
     display: inline-block;
     width: 100px; 
 }
+
+html, body {
+    background-color: #ff0800;
+    color: #ffffff;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.flex-center {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+.content {
+    text-align: center;
+}
+
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.m-b-md {
+    margin-bottom: 30px;
+}
+
+footer{
+    background: #cd0700;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.title {
+    font-size: 40px;
+    border-bottom: 2px solid;
+    padding: 12px;
+    color: #ffffff;
+}
+

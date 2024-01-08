@@ -1,19 +1,26 @@
 @extends('sablony.sablona')
 @section('kontent')
-       <section>
-            <div class="telo">
-                <div class="nadpis col-auto">
-                    <h1>Kdy máš čas?</h1>
-                </div>
-                <div class="row">
-                    <div class="col-12"><input placeholder="Den" class="input"></div>
-                    <div class="col-md-6 col-12"><input placeholder="Od kdy?" class="input"></div>
-                    <div class="col-md-6 col-12"><input placeholder="Do kdy?" class="input"></div>
-                </div>
-                <div class="row">
-                    <div class="col-auto"><a class="dalsi" href="{{ url('/vyber_jidla') }}">Uložit a pokračovat</a></div>
-                </div>
-                <br>
-            </div>
-        </section>
-        @endsection
+<div class="telo">
+    <div class="d-flex align-items-start justify-content-start">
+        <img src="/img/logo.png" alt="logo" class="my-2" style="width: 10%;"> 
+    </div>
+    <div class="d-flex justify-content-center align-items-center" style="height: 25vh;">
+        <h1>Kdy máte čas?</h1>
+    </div>
+    <div class="d-flex flex-column justify-content-center align-items-center mb-3" >
+        <div class="d-flex justify-content-center align-items-center col-md-4 col-12">
+            <input type="text" placeholder="Den" class="input mb-3">
+        </div>
+        <div class="d-flex justify-content-center align-items-center col-md-4 col-12">
+            <input type="text" placeholder="Od kdy?" class="input mb-3">
+        </div>
+        <div class="d-flex justify-content-center align-items-center col-md-4 col-12">
+            <input type="text" placeholder="Do kdy?" class="input mb-3">
+        </div>
+    </div>
+    <div class="d-flex justify-content-center align-items-center">
+        <button type="button" class="btn btn-outline-light" style="margin-right: 20px;" onclick="window.location.href='/vyber_jidla'">Uložit a pokračovat</button>
+        <button type="button" class="btn btn-outline-light" onclick="window.location.href='/zakladni_udaje'">Vrátit se</button>
+    </div>
+</div>
+@endsection

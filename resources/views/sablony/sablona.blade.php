@@ -9,15 +9,17 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 
-<body class="container">
-    <header>
-        <div class="hlavicka">
-            <div class="logo"><img src="/img/IMG_0033.png"></div>
-        </div>
-    </header>
+<body class="container-fluid">
     <main>
         @yield('kontent')
     </main>
-</body>
 
+    <footer>
+            2024 meet&eat
+    </footer>
+</body>
 </html>
+
+
+
+
