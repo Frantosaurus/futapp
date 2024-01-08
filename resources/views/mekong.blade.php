@@ -3,7 +3,7 @@
 <section>
             <div class="telo">
             <div class="nadpis col-auto">
-                    <h1>Me Kong</h1>
+                    <h1>Me kong</h1>
                 </div>
              <div class="row">
                 <div class="col-sm">

@@ -90,7 +90,7 @@
     left: 10px;
     top: 10px;
     position: absolute;
-    border: 1px solid #ddd;
+    border: 1px solid #cd0700;
     border-radius: 5px;
 }
 
@@ -100,11 +100,11 @@
 
 .oteviraci_doba {
     font-family: 'Arial', sans-serif;
-    background-color: #f2f2f2;
+    background-color: #cd0700;
     margin-top: 10px;
     margin-left: 10px; 
     margin-bottom: 10px;
-    border: 1px solid #ddd;
+    border: 1px solid #cd0700;
     border-radius: 5px;
     width: 200px;  
 }
