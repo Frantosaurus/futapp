@@ -56,9 +56,11 @@ class RestaurantController extends Controller
     }
     
     // jednotlivé restaurace
-    public function showType($type)
+    public function showType($cuisine, $type)
     {
-        return view($type);
+        $viewName = $cuisine . '.' . $type;
+       // $viewName = "cina." . $type;
+        return view($viewName);
     }
 
    

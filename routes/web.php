@@ -26,25 +26,31 @@ Route::get('/cas', [RestaurantController::class, 'cas'])->name("cas");
 
 
 //druhy restaurací a jednotlivé restaurace     (měla by být vždy na konci, kvůli /{type}. Zvládne druhy restaurací i jednotlivé restaurace)
-Route::get('/{type}', [RestaurantController::class, 'showType']);
-
-
-
-
+Route::get('/{cuisine}/{type}', [RestaurantController::class, 'showType']);
 
 
 
 
 
 //jednotlivé restaurace   (toto je důležité, pro správné fungování 'cina', nikoli pro zobrazování jednotlivých restaurací)
-Route::get('/mekong', [RestaurantController::class, 'mekong'])->name("mekong");
-Route::get('/lotus', [RestaurantController::class, 'lotus'])->name("lotus");
-Route::get('/chopstix', [RestaurantController::class, 'chopstix'])->name("chopstix");
-Route::get('/King_Sheng_Restaurant', [RestaurantController::class, 'King_Sheng_Restaurant'])->name("King_Sheng_Restaurant");
-Route::get('/Sayam', [RestaurantController::class, 'Sayam'])->name("Sayam");
-Route::get('/U_bileho_dracka', [RestaurantController::class, 'U_bileho_dracka'])->name("U_bileho_dracka");
-Route::get('/Zlaty_drak', [RestaurantController::class, 'Zlaty_drak'])->name("Zlaty_drak");
-Route::get('/Homy_asian_fusion', [RestaurantController::class, 'Homy_asian_fusion'])->name("Homy_asian_fusion");
+Route::get('/cina/mekong', [RestaurantController::class, 'mekong'])->name("mekong");
+Route::get('/cina/lotus', [RestaurantController::class, 'lotus'])->name("lotus");
+Route::get('/cina/chopstix', [RestaurantController::class, 'chopstix'])->name("chopstix");
+Route::get('/cina/King_Sheng_Restaurant', [RestaurantController::class, 'King_Sheng_Restaurant'])->name("King_Sheng_Restaurant");
+Route::get('/cina/Sayam', [RestaurantController::class, 'Sayam'])->name("Sayam");
+Route::get('/cina/U_bileho_dracka', [RestaurantController::class, 'U_bileho_dracka'])->name("U_bileho_dracka");
+Route::get('/cina/Zlaty_drak', [RestaurantController::class, 'Zlaty_drak'])->name("Zlaty_drak");
+Route::get('/cina/Homy_asian_fusion', [RestaurantController::class, 'Homy_asian_fusion'])->name("Homy_asian_fusion");
+
+Route::get('indie/Bombay_express', [RestaurantController::class, 'Bombay_express'])->name("Bombay_express");
+Route::get('/indie/BUDDHA', [RestaurantController::class, 'BUDDHA'])->name("BUDDHA");
+Route::get('/indie/Everest', [RestaurantController::class, 'Everest'])->name("Everest");
+Route::get('/indie/Gandhi', [RestaurantController::class, 'Gandhi'])->name("Gandhi");
+Route::get('/indie/Ganesh', [RestaurantController::class, 'Ganesh'])->name("Ganesh");
+Route::get('/indie/Kanchenjunga', [RestaurantController::class, 'Kanchenjunga'])->name("Kanchenjunga");
+Route::get('/indie/Kathmandu', [RestaurantController::class, 'Kathmandu'])->name("Kathmandu");
+Route::get('/indie/Namaste', [RestaurantController::class, 'Namaste'])->name("Namaste");
+Route::get('/indie/Zaika', [RestaurantController::class, 'Zaika'])->name("Zaika");
 //Route::get('/restaurant2', [RestaurantController::class, 'restaurant2'])->name("restaurant2");
 //Route::get('/restaurant3', [RestaurantController::class, 'restaurant3'])->name("restaurant3");
 

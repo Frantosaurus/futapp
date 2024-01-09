@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm">
                         <div class ="podnadpis">
-                        <label><strong>Adresa:</strong>Olympia Plzeň, Písecká 972/1, 326 00 Plzeň 8-Černice</label>
+                        <label><strong>Adresa:</strong> Olympia Plzeň, Písecká 972/1, 326 00 Plzeň 8-Černice</label>
                         <br>
                             <label><strong>Tel. číslo:</strong> 773 173 756 </label>    
                         </div>
