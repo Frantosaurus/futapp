@@ -4,15 +4,15 @@
             <div class="telo">
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
+                        <img src="/img/logo.png">
                         <p>La Chica | Casa Mexicana</p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
+                        <img src="/img/logo.png">
                         <p>Pancho's</p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
+                        <img src="/img/logo.png">
                         <p></p>
                     </div>
                 </div>

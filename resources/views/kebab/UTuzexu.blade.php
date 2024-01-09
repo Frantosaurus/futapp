@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm">
                         <div class ="podnadpis">
-                        <label><strong>Adresa:</strong>  Palackého 87/13, 301 00 Plzeň 3-Jižní Předměstí</label>
+                        <label><strong>Adresa:</strong> Palackého 87/13, 301 00 Plzeň 3-Jižní Předměstí</label>
                         <br>
                             <label><strong>Tel. číslo:</strong> / </label>    
                         </div>

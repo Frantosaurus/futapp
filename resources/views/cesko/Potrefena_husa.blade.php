@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm">
                         <div class ="podnadpis">
-                        <label><strong>Adresa:</strong>1, Martinská 10, Jižní Předměstí, 301 00 Plzeň</label>
+                        <label><strong>Adresa:</strong> 1, Martinská 10, Jižní Předměstí, 301 00 Plzeň</label>
                         <br>
                             <label><strong>Tel. číslo:</strong> 777 760 146</label>    
                         </div>

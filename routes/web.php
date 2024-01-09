@@ -40,6 +40,7 @@ Route::get('/cina/lotus', [RestaurantController::class, 'lotus'])->name("lotus")
 Route::get('/cina/chopstix', [RestaurantController::class, 'chopstix'])->name("chopstix");
 Route::get('/cina/King_Sheng_Restaurant', [RestaurantController::class, 'King_Sheng_Restaurant'])->name("King_Sheng_Restaurant");
 Route::get('/cina/Sayam', [RestaurantController::class, 'Sayam'])->name("Sayam");
+Route::get('/cina/Victory_Asia_Restaurant', [RestaurantController::class, 'Victory_Asia_Restaurant'])->name("Victory_Asia_Restaurant");
 Route::get('/cina/U_bileho_dracka', [RestaurantController::class, 'U_bileho_dracka'])->name("U_bileho_dracka");
 Route::get('/cina/Zlaty_drak', [RestaurantController::class, 'Zlaty_drak'])->name("Zlaty_drak");
 Route::get('/cina/Homy_asian_fusion', [RestaurantController::class, 'Homy_asian_fusion'])->name("Homy_asian_fusion");

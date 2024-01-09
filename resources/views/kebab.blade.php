@@ -4,44 +4,44 @@
             <div class="telo">
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Alanya Kebab</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Alanya') }}">Alanya Kebab</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Alibaba Kebab</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Alibaba_Kebab') }}">Alibaba Kebab</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Ali baba Kebab</p>
-                    </div>
-                </div>
-                <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Family Kebab</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>I love Kebab</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>King´s Kebab & Fries</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Ali_Baba_Kebab') }}">Ali baba Kebab</a></p>
                     </div>
                 </div>
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Kebab Masarykova</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Family_Kebab') }}">Family Kebab</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Kebab Tylovka</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('I_love_Kebab') }}">I love Kebab</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Kebab U Tuzexu</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('JH_Kebab_House') }}">JH Kebab House</a></p>
+                    </div>
+                </div>
+                <div class="karty">
+                    <div class="karta">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Masarykova_Kebab') }}">Kebab Masarykova</a></p>
+                    </div>
+                    <div class="karta">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Tylova_Kebab') }}">Kebab Tylovka</a></p>
+                    </div>
+                    <div class="karta">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('UTuzexu') }}">Kebab U Tuzexu</a></p>
                     </div>
                 </div>
                 <br>

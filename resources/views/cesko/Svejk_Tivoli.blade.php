@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm">
                         <div class ="podnadpis">
-                        <label><strong>Adresa:</strong>  Klatovská tř. 125, 301 00 Plzeň 3</label>
+                        <label><strong>Adresa:</strong> Klatovská tř. 125, 301 00 Plzeň 3</label>
                         <br>
                             <label><strong>Tel. číslo:</strong> 377 423 377 </label>    
                         </div>

@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm">
                         <div class ="podnadpis">
-                        <label><strong>Adresa:</strong>Masarykova 1201/75, 312 00 Plzeň 4-Doubravka</label>
+                        <label><strong>Adresa:</strong> Masarykova 1201/75, 312 00 Plzeň 4-Doubravka</label>
                         <br>
                             <label><strong>Tel. číslo:</strong> 601 523 693 </label>    
                         </div>

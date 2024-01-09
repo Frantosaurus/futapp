@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm">
                         <div class ="podnadpis">
-                        <label><strong>Adresa:</strong>Smetanovy sady 13, 301 00 Plzeň 3</label>
+                        <label><strong>Adresa:</strong> Smetanovy sady 13, 301 00 Plzeň 3</label>
                         <br>
                             <label><strong>Tel. číslo:</strong> 739 257 051 </label>    
                         </div>

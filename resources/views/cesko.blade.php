@@ -4,57 +4,57 @@
             <div class="telo">
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Hospoda Na Spilce</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('NaSpilce') }}">Hospoda Na Spilce</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Lokál Pod Divadlem</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Lokal') }}">Lokál Pod Divadlem</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Plzeňka</p>
-                    </div>
-                </div>
-                <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Potrefená Husa</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>restaurace Žumbera</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Švejk - TIVOLI</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Plzenka') }}">Plzeňka</a></p>
                     </div>
                 </div>
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Švejk - U pětatřicátníků</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Potrefena_husa') }}">Potrefená Husa</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Uctívaný Velbloud</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Zumbera') }}">restaurace Žumbera</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>U Mansfelda</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Svejk_Tivoli') }}">Švejk - TIVOLI</a></p>
                     </div>
                 </div>
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Švejk - U U Motlíků</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Svejk_35') }}">Švejk - U pětatřicátníků</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Velbloud') }}">Uctívaný Velbloud</a></p>
+                    </div>
+                    <div class="karta">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('UMansfelda') }}">U Mansfelda</a></p>
+                    </div>
+                </div>
+                <div class="karty">
+                    <div class="karta">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('UMotliku') }}">U Motlíků</a></p>
+                    </div>
+                    <div class="karta">
+                        <img src="/img/logo.png">
                         <p></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
+                        <img src="/img/logo.png">
                         <p></p>
                     </div>
                 </div>

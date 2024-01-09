@@ -13,7 +13,7 @@
                 </div>
                 <div class="col-sm">
                         <div class ="podnadpis">
-                        <label><strong>Adresa:</strong>Petřínská 31, 326 00 Plzeň 2-Slovany</label>
+                        <label><strong>Adresa:</strong> Petřínská 31, 326 00 Plzeň 2-Slovany</label>
                         <br>
                             <label><strong>Tel. číslo:</strong> 731 959 121 </label>    
                         </div>
