@@ -59,13 +59,18 @@ class RestaurantController extends Controller
     public function showCusine($cuisine, $type)
     {
         $viewName = $cuisine . '.' . $type;
-       // $viewName = "cina." . $type;
-        return view($viewName);
+
+        if (view()->exists($viewName)) {
+            return view($viewName);
+        } else {
+            abort(404); //kdyby za lomítkem nic neexistovalo, hodí to namísto laravel chyby error 404
+        }
     }
 
     public function showType($type)
     {
         return view($type);
+
     }
    
 
