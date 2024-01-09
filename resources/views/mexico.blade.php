@@ -4,15 +4,15 @@
             <div class="telo">
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>La Chica | Casa Mexicana</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('La_Chica') }}">La Chica | Casa Mexicana</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Pancho's</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Pancho') }}">Pancho's</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
+                        <img src="/img/logo.png">
                         <p></p>
                     </div>
                 </div>

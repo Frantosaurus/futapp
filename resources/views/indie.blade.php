@@ -4,44 +4,44 @@
             <div class="telo">
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Bombay Express</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Bombay_express') }}">Bombay Express</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>BUDDHA</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('BUDDHA') }}">Buddha</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Everest</p>
-                    </div>
-                </div>
-                <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Gandhi</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Ganesh</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Indian Zaika Restaurant</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Everest') }}">Everest</a></p>
                     </div>
                 </div>
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Kanchenjunga</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Gandhi') }}">Gandhi</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Kathmandu</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Ganesh') }}">Ganesh</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Namaste</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Zaika') }}">Indian Zaika Restaurant</a></p>
+                    </div>
+                </div>
+                <div class="karty">
+                    <div class="karta">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Kanchenjunga') }}">Kanchenjunga</a></p>
+                    </div>
+                    <div class="karta">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Kathmandu') }}">Kathmandu</a></p>
+                    </div>
+                    <div class="karta">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Namaste') }}">Namaste</a></p>
                     </div>
                 </div>
                 <br>

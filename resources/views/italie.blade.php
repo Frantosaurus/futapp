@@ -4,43 +4,43 @@
             <div class="telo">
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Bolevecká pizzerie</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Bolevecka_pizzerie') }}">Bolevecká pizzerie</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>I love Pizza</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('I_love_pizza') }}">I love Pizza</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Pizzerie Massimo</p>
-                    </div>
-                </div>
-                <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Ristorante & Pizzerie Da Nico</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Pizzeria da pietro</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Pizzerie Da Vinci</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Massimo') }}">Pizzerie Massimo</a></p>
                     </div>
                 </div>
                 <div class="karty">
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Pizzerie Mamma Mia</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Da_Nico') }}">Ristorante & Pizzerie Da Nico</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Rango restaurant</p>
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('daPietro') }}">Pizzeria da pietro</a></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Da_Vinci') }}">Pizzerie Da Vinci</a></p>
+                    </div>
+                </div>
+                <div class="karty">
+                    <div class="karta">
+                        <img src="/img/logo.png">>
+                        <p><a href="{{ route('Mamma_Mia') }}">Pizzerie Mamma Mia</a></p>
+                    </div>
+                    <div class="karta">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('Rango') }}">Rango restaurant</a></p>
+                    </div>
+                    <div class="karta">
+                        <img src="/img/logo.png">
                         <p></p>
                     </div>
                 </div>
