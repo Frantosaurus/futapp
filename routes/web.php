@@ -34,8 +34,17 @@ Route::get('/{type}', [RestaurantController::class, 'showType']);
 
 
 
+
+
 //jednotlivé restaurace   (toto je důležité, pro správné fungování 'cina', nikoli pro zobrazování jednotlivých restaurací)
 Route::get('/mekong', [RestaurantController::class, 'mekong'])->name("mekong");
+Route::get('/lotus', [RestaurantController::class, 'lotus'])->name("lotus");
+Route::get('/chopstix', [RestaurantController::class, 'chopstix'])->name("chopstix");
+Route::get('/King_Sheng_Restaurant', [RestaurantController::class, 'King_Sheng_Restaurant'])->name("King_Sheng_Restaurant");
+Route::get('/Sayam', [RestaurantController::class, 'Sayam'])->name("Sayam");
+Route::get('/U_bileho_dracka', [RestaurantController::class, 'U_bileho_dracka'])->name("U_bileho_dracka");
+Route::get('/Zlaty_drak', [RestaurantController::class, 'Zlaty_drak'])->name("Zlaty_drak");
+Route::get('/Homy_asian_fusion', [RestaurantController::class, 'Homy_asian_fusion'])->name("Homy_asian_fusion");
 //Route::get('/restaurant2', [RestaurantController::class, 'restaurant2'])->name("restaurant2");
 //Route::get('/restaurant3', [RestaurantController::class, 'restaurant3'])->name("restaurant3");
 
