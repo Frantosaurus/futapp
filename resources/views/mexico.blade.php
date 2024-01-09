@@ -5,11 +5,11 @@
                 <div class="karty">
                     <div class="karta">
                         <img src="/img/logo.png">
-                        <p>La Chica | Casa Mexicana</p>
+                        <p><a href="{{ route('La_Chica') }}">La Chica | Casa Mexicana</a></p>
                     </div>
                     <div class="karta">
                         <img src="/img/logo.png">
-                        <p>Pancho's</p>
+                        <p><a href="{{ route('Pancho') }}">Pancho's</a></p>
                     </div>
                     <div class="karta">
                         <img src="/img/logo.png">

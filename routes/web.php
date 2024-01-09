@@ -85,6 +85,9 @@ Route::get('/kebab/Masarykova_Kebab', [RestaurantController::class, 'Masarykova_
 Route::get('/kebab/Tylova_Kebab', [RestaurantController::class, 'Tylova_Kebab'])->name("Tylova_Kebab");
 Route::get('/kebab/UTuzexu', [RestaurantController::class, 'UTuzexu'])->name("UTuzexu");
 
+Route::get('/mexico/La_Chica', [RestaurantController::class, 'La_Chica'])->name("La_Chica");
+Route::get('/mexico/Pancho', [RestaurantController::class, 'Pancho'])->name("Pancho");
+
 
 //Route::get('/restaurant2', [RestaurantController::class, 'restaurant2'])->name("restaurant2");
 //Route::get('/restaurant3', [RestaurantController::class, 'restaurant3'])->name("restaurant3");
