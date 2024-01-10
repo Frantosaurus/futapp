@@ -71,11 +71,13 @@ class RestaurantController extends Controller
         return view($type);
     }
 
+
+    //Obě funkce slouží pro ukládání dat do cache paměti. Jedna ukládá pouze do cache, druhá ukládá do cache a také do databáze.
     public function storeToCache(Request $request)
     {
         // Uložení dat do cache
         $userData = Cache::get('user_data', []);
-        $newData = $request->only(['name', 'last_name', 'type_of_food', 'specific_restaurant']);
+        $newData = $request->only(['name', 'last_name']);
         $userData = array_merge($userData, $newData);
         Cache::put('user_data', $userData, 600);
 
@@ -101,7 +103,7 @@ class RestaurantController extends Controller
         $uzivatel->save();
 
         // Přesměrování na další stránku
-        return redirect()->route('cas');
+        return redirect()->route('hlavni_stranka');
     }
 
     
