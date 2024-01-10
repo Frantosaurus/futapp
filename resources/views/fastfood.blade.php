@@ -5,49 +5,49 @@
                 <div class="karty">
                     <div class="karta">
                         <img src="/img/logo.png">
-                        <p>Angus</p>
+                        <p><a href="{{ route('Angus') }}">Angus</a></p>
                     </div>
                     <div class="karta">
                         <img src="/img/logo.png">
-                        <p>Bageterie Boulevard</p>
+                        <p><a href="{{ route('Bageterie') }}">Bageterie Boulevard</a></p>
                     </div>
                     <div class="karta">
                         <img src="/img/logo.png">
-                        <p>Big Burger</p>
-                    </div>
-                </div>
-                <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p>Buffalo Burger Bar</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p>Burger King</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p>Delish</p>
+                        <p><a href="{{ route('BigBurger') }}">Big Burger</a></p>
                     </div>
                 </div>
                 <div class="karty">
                     <div class="karta">
                         <img src="/img/logo.png">
-                        <p>FÆNCY FRIES</p>
+                        <p><a href="{{ route('Buffalo') }}">Buffalo Burger Bar</a></p>
                     </div>
                     <div class="karta">
                         <img src="/img/logo.png">
-                        <p>KFC</p>
+                        <p><a href="{{ route('BurgerKing') }}">Burger King</a></p>
                     </div>
                     <div class="karta">
                         <img src="/img/logo.png">
-                        <p>McDonald</p>
+                        <p><a href="{{ route('Delish') }}">Delish</a></p>
                     </div>
                 </div>
                 <div class="karty">
                     <div class="karta">
                         <img src="/img/logo.png">
-                        <p>NewYork</p>
+                        <p><a href="{{ route('FancyFries') }}">FÆNCY FRIES</a></p>
+                    </div>
+                    <div class="karta">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('KFC') }}">KFC</a></p>
+                    </div>
+                    <div class="karta">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('McDonald') }}">McDonald</a></p>
+                    </div>
+                </div>
+                <div class="karty">
+                    <div class="karta">
+                        <img src="/img/logo.png">
+                        <p><a href="{{ route('NewYork') }}">NewYork</a></p>
                     </div>
                     <div class="karta">
                         <img src="/img/logo.png">

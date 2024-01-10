@@ -1,4 +1,4 @@
-resources/views/fastfood/BigBurger.blade.php@extends('sablony.sablona')
+@extends('sablony.sablona')
 @section('kontent')
 <section>
             <div class="telo">

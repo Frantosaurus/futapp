@@ -1,4 +1,4 @@
-resources/views/fastfood/BigBurger.blade.php@extends('sablony.sablona')
+@extends('sablony.sablona')
 @section('kontent')
 <section>
             <div class="telo">
@@ -20,10 +20,10 @@ resources/views/fastfood/BigBurger.blade.php@extends('sablony.sablona')
                         <div class="oteviraci_doba">
                             <h6> <strong>Otevírací doba:</strong></h6>
                             <div><strong><span>Pondělí:</span></strong> 11:14</div>
-                            <div><strong><span>Úterý:</span></strong> 11:14<</div>
-                            <div><strong><span>Středa:</span></strong> 11:14<</div>
-                            <div><strong><span>Čtvrtek:</span></strong> 11:14<</div>
-                            <div><strong><span>Pátek:</span></strong> 11:14<</div>
+                            <div><strong><span>Úterý:</span></strong> 11:14</div>
+                            <div><strong><span>Středa:</span></strong> 11:14</div>
+                            <div><strong><span>Čtvrtek:</span></strong> 11:14</div>
+                            <div><strong><span>Pátek:</span></strong> 11:14</div>
                             <div><strong><span>Sobota:</span></strong> Zavřeno</div>
                             <div><strong><span>Neděle:</span></strong> Zavřeno</div>
                         </div>

@@ -85,6 +85,20 @@ Route::get('/kebab/Masarykova_Kebab', [RestaurantController::class, 'Masarykova_
 Route::get('/kebab/Tylova_Kebab', [RestaurantController::class, 'Tylova_Kebab'])->name("Tylova_Kebab");
 Route::get('/kebab/UTuzexu', [RestaurantController::class, 'UTuzexu'])->name("UTuzexu");
 
+Route::get('/fastfood/Angus', [RestaurantController::class, 'Angus'])->name("Angus");
+Route::get('/fastfood/Bageterie', [RestaurantController::class, 'Bageterie'])->name("Bageterie");
+Route::get('/fastfood/BigBurger', [RestaurantController::class, 'BigBurger'])->name("BigBurger");
+Route::get('/fastfood/Buffalo', [RestaurantController::class, 'Buffalo'])->name("Buffalo");
+Route::get('/fastfood/BurgerKing', [RestaurantController::class, 'BurgerKing'])->name("BurgerKing");
+Route::get('/fastfood/Delish', [RestaurantController::class, 'Delish'])->name("Delish");
+Route::get('/fastfood/FancyFries', [RestaurantController::class, 'FancyFries'])->name("FancyFries");
+Route::get('/fastfood/KFC', [RestaurantController::class, 'KFC'])->name("KFC");
+Route::get('/fastfood/McDonald', [RestaurantController::class, 'McDonald'])->name("McDonald");
+Route::get('/fastfood/NewYork', [RestaurantController::class, 'NewYork'])->name("NewYork");
+
+Route::get('/Menza/Menza_Bory', [RestaurantController::class, 'Menza_Bory'])->name("Menza_Bory");
+Route::get('/Menza/Menza_Kollarova', [RestaurantController::class, 'Menza_Kollarova'])->name("Menza_Kollarova");
+
 Route::get('/mexico/La_Chica', [RestaurantController::class, 'La_Chica'])->name("La_Chica");
 Route::get('/mexico/Pancho', [RestaurantController::class, 'Pancho'])->name("Pancho");
 
