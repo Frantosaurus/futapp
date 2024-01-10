@@ -28,6 +28,10 @@
                             <div><strong><span>Neděle:</span></strong> Zavřeno</div>
                         </div>
                 </div>
+                <div class="d-flex justify-content-center align-items-center">
+            <button type="submit" class="btn btn-outline-light" style="margin-right: 20px;">Pokračovat</button>
+            <button type="button" class="btn btn-outline-light" onclick="window.location.href='/menza'">Vrátit se</button>
+            </div>
              </div>
             </div>
         </section>

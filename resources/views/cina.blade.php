@@ -45,14 +45,10 @@
             </div>
         </div>
         <br>
-        <div class="row d-flex justify-content-center align-items-center">
-    <div class="col-auto">
-        <button type="button" class="btn btn-outline-light" onclick="window.location.href=''">Pokračovat</button>
-    </div>
-    <div class="col-auto">
-        <button type="button" class="btn btn-outline-light" onclick="window.location.href=''">Je mi to jedno</button>
-    </div>
-</div>
+                <div class="d-flex justify-content-center align-items-center">
+            <button type="button" class="btn btn-outline-light" onclick="window.location.href='/vyber_jidla'">Vrátit se</button>
+                <br>
+            </div>
         <br>
     </div>
 </section>

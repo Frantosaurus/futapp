@@ -73,7 +73,7 @@ class RestaurantController extends Controller
 
 
     //Obě funkce slouží pro ukládání dat do cache paměti. Jedna ukládá pouze do cache, druhá ukládá do cache a také do databáze.
-    public function storeToCache(Request $request)
+    public function zakladni_udajeToCache(Request $request)
     {
         // Uložení dat do cache
         $userData = Cache::get('user_data', []);
@@ -85,7 +85,7 @@ class RestaurantController extends Controller
         return redirect()->route('cas');
     }
 
-    public function storeToCacheAndSaveToDatabase(Request $request)
+    public function casToCache(Request $request)
     {
         // Uložení dat do cache
         $userData = Cache::get('user_data', []);
@@ -93,21 +93,21 @@ class RestaurantController extends Controller
         $userData = array_merge($userData, $newData);
         Cache::put('user_data', $userData, 600);
 
-        // Uložení dat do databáze
-        $uzivatel = new User();
-        $uzivatel->name = $userData['name'];
-        $uzivatel->last_name = $userData['last_name'];
-        $uzivatel->den = $userData['den'];
-        $uzivatel->od_kdy = $userData['od_kdy'];
-        $uzivatel->do_kdy = $userData['do_kdy'];
-        $uzivatel->save();
-
         // Přesměrování na další stránku
-        return redirect()->route('hlavni_stranka');
+        return redirect()->route('vyber_jidla');
     }
 
-    
-
+    public function restauraceToCacheAndSaveToDatabase(Request $request)
+    {
+    // Uložení dat do databáze
+    $uzivatel = new User();
+    $uzivatel->name = $userData['name'];
+    $uzivatel->last_name = $userData['last_name'];
+    $uzivatel->den = $userData['den'];
+    $uzivatel->od_kdy = $userData['od_kdy'];
+    $uzivatel->do_kdy = $userData['do_kdy'];
+    $uzivatel->save();
+    }
     /*
 
 

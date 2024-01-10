@@ -45,10 +45,8 @@
                     </div>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="col-auto"><a class="dalsi" href="konkretni_jidlo_cina.html">Pokračovat</a></div>
-                    <div class="col-auto"><a class="dalsi" href="konkretni_jidlo_mexico.html">Je mi to jedno</a></div>
-                </div>
+                <div class="d-flex justify-content-center align-items-center">
+            <button type="button" class="btn btn-outline-light" onclick="window.location.href='/cas'">Vrátit se</button>
                 <br>
             </div>
         </section>
