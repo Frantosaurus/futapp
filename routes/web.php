@@ -22,7 +22,13 @@ Route::post('/zakladni_udaje', [RestaurantController::class, 'udaje'])->name("ud
 
 Route::get('/vyber_jidla', [RestaurantController::class, 'vyber_jidla']);
 
-Route::get('/cas', [RestaurantController::class, 'cas'])->name("cas");
+Route::get('/cas', [RestaurantController::class, 'cas'])->name('cas');
+
+Route::get('/hlavni_stranka', [RestaurantController::class, 'hlavni_stranka'])->name('hlavni_stranka');
+
+//pro ukládání do cache paměti
+Route::post('/storeToCache', [RestaurantController::class, 'storeToCache'])->name('storeToCache');   //zpracuje data z formuláře a uloží je do cache paměti
+Route::post('/storeToCacheAndSaveToDatabase', [RestaurantController::class, 'storeToCacheAndSaveToDatabase'])->name('storeToCacheAndSaveToDatabase');  //zpracuje data z formuláře, uloží je do cache paměti a také je uloží do databáze
 
 
 //druhy restaurací a jednotlivé restaurace     (měla by být vždy na konci, kvůli /{type}. Zvládne druhy restaurací i jednotlivé restaurace)
