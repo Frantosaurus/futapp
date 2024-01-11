@@ -2,44 +2,19 @@
 @section('kontent')
         <section>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="http://127.0.0.1:8000/cina">Asijská kuchyně</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="http://127.0.0.1:8000/indie">Indická kuchyně</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="http://127.0.0.1:8000/cesko">Česká kuchyně</a></p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/cina'">Asijská kuchyně</button>
+                    <button class="karta" onclick="window.location.href='/indie'">Indická kuchyně</button>
+                    <button class="karta" onclick="window.location.href='/cesko'">Česká kuchyně</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="http://127.0.0.1:8000/kebab">Kebab</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="http://127.0.0.1:8000/italie">Italská kuchyně</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="http://127.0.0.1:8000/mexico">Mexická kuchyně</a></p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/kebab'">Kebab</button>
+                    <button class="karta" onclick="window.location.href='/italie'">Italská kuchyně</button>
+                    <button class="karta" onclick="window.location.href='/mexico'">Mexická kuchyně</button>
                 </div>
                 <div class="karty">
+                    <button class="karta" onclick="window.location.href='/fastfood'">Fastfood</button>
+                    <button class="karta" onclick="window.location.href='/menza'">Menza</button>
                     <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="http://127.0.0.1:8000/fastfood">Fastfood</a></p>        
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="http://127.0.0.1:8000/menza">Menza</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
                         <p></p>
                     </div>
                 </div>
