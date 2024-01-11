@@ -1,50 +1,46 @@
 <?php
-
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RestaurantController;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
 
+//zákaldní přepínání mezi stránkami
 Route::get('/', [RestaurantController::class, 'hlavni_stranka']);
-
-Route::get('/zakladni_udaje', [RestaurantController::class, 'zakladni_udaje']);
-Route::post('/zakladni_udaje', [RestaurantController::class, 'udaje'])->name("udaje");
-
-Route::get('/vyber_jidla', [RestaurantController::class, 'vyber_jidla']);
-
-Route::get('/cas', [RestaurantController::class, 'cas'])->name('cas');
-Route::get('/match', [RestaurantController::class, 'match'])->name('match');
-
 Route::get('/hlavni_stranka', [RestaurantController::class, 'hlavni_stranka'])->name('hlavni_stranka');
 
-//pro ukládání do cache paměti
-Route::post('/zakladni_udajeToCache', [RestaurantController::class, 'zakladni_udajeToCache'])->name('zakladni_udajeToCache');   //zpracuje data z formuláře a uloží je do cache paměti
-Route::post('/casToCache', [RestaurantController::class, 'casToCache'])->name('casToCache');
-Route::post('/celamezipametToCacheAndSaveToDatabase', [RestaurantController::class, 'celamezipametToCacheAndSaveToDatabase'])->name('celamezipametToCacheAndSaveToDatabase');  //zpracuje data z formuláře, uloží je do cache paměti a také je uloží do databáze
-
-
-
-//druhy restaurací a jednotlivé restaurace     (měla by být vždy na konci, kvůli /{type}. Zvládne druhy restaurací i jednotlivé restaurace)
-Route::get('/{type}', [RestaurantController::class, 'showType']);
-
-Route::get('/{cuisine}/{type}', [RestaurantController::class, 'showCusine']);
+Route::get('/zakladni_udaje', [RestaurantController::class, 'zakladni_udaje']);
 
 Route::get('/vyber_jidla', [RestaurantController::class, 'vyber_jidla'])->name('vyber_jidla');
 
+Route::get('/cas', [RestaurantController::class, 'cas'])->name('cas');
+
+Route::get('/match', [RestaurantController::class, 'match'])->name('match');
+
+
+//všechny 3 zpracují data z formuláře a uloží je do cache paměti
 Route::post('/zakladni-udaje', [RestaurantController::class, 'zakladni_udajeToCache'])->name('zakladni_udajeToCacheToCache');
+Route::post('/cas', [RestaurantController::class, 'casToCache'])->name('casToCache');
+Route::post('/celamezipametToCacheAndSaveToDatabase', [RestaurantController::class, 'celamezipametToCacheAndSaveToDatabase'])->name('celamezipametToCacheAndSaveToDatabase');  //tato část je i uloží do databáze
 
 
-//jednotlivé restaurace   (toto je důležité, pro správné fungování 'cina', nikoli pro zobrazování jednotlivých restaurací)
+
+
+
+
+
+//druhy restaurací     (měla by být vždy na konci, kvůli /{type})
+Route::get('/{type}', [RestaurantController::class, 'showType']);
+
+//jednotlivé restaurace
+Route::get('/{cuisine}/{type}', [RestaurantController::class, 'showCusine']);
+
+
+
+
+
+
+
+//jednotlivé restaurace   (toto je důležité, pro správné fungování druhů restaurací, nikoli pro zobrazování jednotlivých restaurací)
 Route::get('/cina/mekong', [RestaurantController::class, 'mekong'])->name("mekong");
 Route::get('/cina/lotus', [RestaurantController::class, 'lotus'])->name("lotus");
 Route::get('/cina/chopstix', [RestaurantController::class, 'chopstix'])->name("chopstix");
@@ -112,43 +108,3 @@ Route::get('/Menza/Menza_Kollarova', [RestaurantController::class, 'Menza_Kollar
 Route::get('/mexico/La_Chica', [RestaurantController::class, 'La_Chica'])->name("La_Chica");
 Route::get('/mexico/Pancho', [RestaurantController::class, 'Pancho'])->name("Pancho");
 
-
-//Route::get('/restaurant2', [RestaurantController::class, 'restaurant2'])->name("restaurant2");
-//Route::get('/restaurant3', [RestaurantController::class, 'restaurant3'])->name("restaurant3");
-
-
-
-
-
-
-
-
-
-/*
-Route::group([], function () {
-    Route::get('/mekong', [RestaurantController::class, 'mekong'])->name("mekong");
-    //Route::get('/restaurant2', [RestaurantController::class, 'restaurant2'])->name("restaurant2");
-    //Route::get('/restaurant3', [RestaurantController::class, 'restaurant3'])->name("restaurant3");
-});
-
-
-//druhy restaurací          (to je zde necháno, kdyby náhodou něco nefungovalo, tak, jak má)
-Route::group([], function () {
-    Route::get('/mexico', [RestaurantController::class, 'mexico']);
-    Route::get('/fastfood', [RestaurantController::class, 'fastfood']);
-    Route::get('/cina', [RestaurantController::class, 'cina']);
-    Route::get('/indie', [RestaurantController::class, 'indie']);
-    Route::get('/italie', [RestaurantController::class, 'italie']);
-    Route::get('/cesko', [RestaurantController::class, 'cesko']);
-    Route::get('/kebab', [RestaurantController::class, 'kebab']);
-});
-
-// jednotlivé restaurace
-Route::group([], function () {
-    Route::get('/mekong', [RestaurantController::class, 'mekong'])->name("mekong");
-});
-
-// jednotlivé restaurace
-Route::get('/{restaurantName}', [RestaurantController::class, 'showRestaurant']);
-
-*/
