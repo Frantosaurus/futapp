@@ -126,11 +126,10 @@ class RestaurantController extends Controller
 
 public function match()
 {
-    // Zde můžete přidat kód, který se má vykonat, když je tato metoda zavolána.
-    // Například můžete načíst data z databáze a zobrazit je v pohledu.
-    // Vrátíme prázdný pohled jako příklad.
-    return view('match');
+    $users = User::all();
+    return view('match', ['users' => $users]);
 }
+
     /*
 
 
