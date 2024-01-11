@@ -28,10 +28,15 @@
                             <div><strong><span>Neděle:</span></strong> 8-21</div>
                         </div>
                 </div>
+                <form action="{{ route('celamezipametToCacheAndSaveToDatabase') }}" method="POST">
+                @csrf
+                <input type="hidden" name="restaurant_name" value="Bageterie Boulevard Rondel">
+                <input type="hidden" name="restaurant_type" value="Fastfood">
                 <div class="d-flex justify-content-center align-items-center">
-            <button type="submit" class="btn btn-outline-light" style="margin-right: 20px;">Pokračovat</button>
-            <button type="button" class="btn btn-outline-light" onclick="window.location.href='/fasfood'">Vrátit se</button>
-            </div>
+                <button type="button" class="btn btn-outline-light" onclick="window.location.href='/cesko'" style="margin-right: 30px;">Vrátit se</button>
+                <button type="submit" class="btn btn-outline-light">Pokračovat</button>
+                </div>
+                </form>
              </div>
             </div>
         </section>
