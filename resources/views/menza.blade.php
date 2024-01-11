@@ -1,7 +1,6 @@
 @extends('sablony.sablona')
 @section('kontent')
 <section>
-            <div class="telo">
                 <div class="karty">
                     <div class="karta">
                         <img src="/img/logo.png">
@@ -22,6 +21,5 @@
                 <br>
             </div>
                 <br>
-            </div>
         </section>
         @endsection

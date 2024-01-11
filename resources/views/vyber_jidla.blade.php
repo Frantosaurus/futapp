@@ -1,7 +1,6 @@
 @extends('sablony.sablona')
 @section('kontent')
         <section>
-            <div class="telo">
                 <div class="karty">
                     <div class="karta">
                         <img src="/img/logo.png">
@@ -48,13 +47,5 @@
                 <div class="d-flex justify-content-center align-items-center">
             <button type="button" class="btn btn-outline-light" onclick="window.location.href='/cas'">Vrátit se</button>
                 <br>
-            </div>
-        </section>
-            </div> 
-           <!-- @foreach($restaurace as $konkterni_restaurace)
-            <div>
-                {{$konkterni_restaurace->typ}}
-            </div>
-            @endforeach-->
-        </section>
+            
 @endsection

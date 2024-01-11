@@ -1,7 +1,6 @@
 @extends('sablony.sablona')
 @section('kontent')
 <section>
-            <div class="telo">
             <div class="nadpis col-auto">
                     <h1>Chopstix</h1>
                 </div>
@@ -38,6 +37,5 @@
                 </div>
                 </form>
              </div>
-            </div>
         </section>
         @endsection

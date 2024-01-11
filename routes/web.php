@@ -23,7 +23,7 @@ Route::post('/cas', [RestaurantController::class, 'casToCache'])->name('casToCac
 Route::post('/celamezipametToCacheAndSaveToDatabase', [RestaurantController::class, 'celamezipametToCacheAndSaveToDatabase'])->name('celamezipametToCacheAndSaveToDatabase');  //tato část je i uloží do databáze
 
 
-
+Route::post('/pokus', [RestaurantController::class, 'pokus'])->name('pokus');
 
 
 
