@@ -3,7 +3,8 @@
 <section>
             <div class="telo">
             <div class="nadpis col-auto">
-                    <h1>Lokál Pod Divadlem</h1>
+            <h1>Lokál Pod Divadlem</h1>
+            </div>
                 </div>
              <div class="row">
                 <div class="col-sm">
@@ -28,10 +29,15 @@
                             <div><strong><span>Neděle:</span></strong> 11-24</div>
                         </div>
                 </div>
+                <form action="{{ route('celamezipametToCacheAndSaveToDatabase') }}" method="POST">
+                @csrf
+                <input type="hidden" name="restaurant_name" value="Lokál Pod Divadlem">
+                <input type="hidden" name="restaurant_type" value="Česká kuchyně">
                 <div class="d-flex justify-content-center align-items-center">
-            <button type="submit" class="btn btn-outline-light" style="margin-right: 20px;">Pokračovat</button>
-            <button type="button" class="btn btn-outline-light" onclick="window.location.href='/cesko'">Vrátit se</button>
-            </div>
+                <button type="button" class="btn btn-outline-light" onclick="window.location.href='/cesko'" style="margin-right: 30px;">Vrátit se</button>
+                <button type="submit" class="btn btn-outline-light">Pokračovat</button>
+                </div>
+                </form>
              </div>
             </div>
         </section>

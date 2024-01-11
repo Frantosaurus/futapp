@@ -21,8 +21,8 @@
             </div>
         </div>
         <div class="d-flex justify-content-center align-items-center">
-            <button type="submit" class="btn btn-outline-light" style="margin-right: 20px;">Pokračovat</button>
-            <button type="button" class="btn btn-outline-light" onclick="window.location.href='/vyber_jidla'">Vrátit se</button>
+            <button type="button" class="btn btn-outline-light" onclick="window.location.href='/zakladni_udaje'" style="margin-right: 30px;">Vrátit se</button>
+            <button type="submit" class="btn btn-outline-light">Pokračovat</button>
         </div>
     </form>
 </div>

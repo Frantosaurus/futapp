@@ -97,17 +97,40 @@ class RestaurantController extends Controller
         return redirect()->route('vyber_jidla');
     }
 
-    public function restauraceToCacheAndSaveToDatabase(Request $request)
-    {
+
+
+
+    public function celamezipametToCacheAndSaveToDatabase(Request $request)
+{
+    // Uložení dat do cache
+    $userData = Cache::get('user_data', []);
+    $newData = $request->only(['restaurant_type', 'restaurant_name']);
+    $userData = array_merge($userData, $newData);
+    Cache::put('user_data', $userData, 600);
+
     // Uložení dat do databáze
     $uzivatel = new User();
-    $uzivatel->name = $userData['name'];
-    $uzivatel->last_name = $userData['last_name'];
-    $uzivatel->den = $userData['den'];
-    $uzivatel->od_kdy = $userData['od_kdy'];
-    $uzivatel->do_kdy = $userData['do_kdy'];
+    $uzivatel->name = $userData['name'] ?? null;
+    $uzivatel->last_name = $userData['last_name'] ?? null;
+    $uzivatel->den = $userData['den'] ?? null;
+    $uzivatel->od_kdy = $userData['od_kdy'] ?? null;
+    $uzivatel->do_kdy = $userData['do_kdy'] ?? null;
+    $uzivatel->restaurant_type = $userData['restaurant_type'];
+    $uzivatel->restaurant_name = $userData['restaurant_name'];
     $uzivatel->save();
-    }
+
+    // Přesměrování na další stránku
+    return redirect()->route('match');
+}
+
+
+public function match()
+{
+    // Zde můžete přidat kód, který se má vykonat, když je tato metoda zavolána.
+    // Například můžete načíst data z databáze a zobrazit je v pohledu.
+    // Vrátíme prázdný pohled jako příklad.
+    return view('match');
+}
     /*
 
 

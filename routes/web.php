@@ -23,13 +23,15 @@ Route::post('/zakladni_udaje', [RestaurantController::class, 'udaje'])->name("ud
 Route::get('/vyber_jidla', [RestaurantController::class, 'vyber_jidla']);
 
 Route::get('/cas', [RestaurantController::class, 'cas'])->name('cas');
+Route::get('/match', [RestaurantController::class, 'match'])->name('match');
 
 Route::get('/hlavni_stranka', [RestaurantController::class, 'hlavni_stranka'])->name('hlavni_stranka');
 
 //pro ukládání do cache paměti
 Route::post('/zakladni_udajeToCache', [RestaurantController::class, 'zakladni_udajeToCache'])->name('zakladni_udajeToCache');   //zpracuje data z formuláře a uloží je do cache paměti
 Route::post('/casToCache', [RestaurantController::class, 'casToCache'])->name('casToCache');
-Route::post('/restauraceToCacheAndSaveToDatabase', [RestaurantController::class, 'restauraceToCacheAndSaveToDatabase'])->name('restauraceToCacheAndSaveToDatabase');  //zpracuje data z formuláře, uloží je do cache paměti a také je uloží do databáze
+Route::post('/celamezipametToCacheAndSaveToDatabase', [RestaurantController::class, 'celamezipametToCacheAndSaveToDatabase'])->name('celamezipametToCacheAndSaveToDatabase');  //zpracuje data z formuláře, uloží je do cache paměti a také je uloží do databáze
+
 
 
 //druhy restaurací a jednotlivé restaurace     (měla by být vždy na konci, kvůli /{type}. Zvládne druhy restaurací i jednotlivé restaurace)
