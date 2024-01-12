@@ -12,16 +12,18 @@ return new class extends Migration
      * @return void
      */
     public function up()
-    {
-        Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('last_name');
-            $table->string('type_of_food');
-            $table->string('specific_restaurant');
-            $table->timestamps();
-        });
-    }
+{
+    Schema::create('users', function (Blueprint $table) {
+        $table->string('name');
+        $table->string('last_name');
+        $table->string('den')->nullable();
+        $table->string('od_kdy')->nullable();
+        $table->string('do_kdy')->nullable();
+        $table->string('restaurant_type')->nullable();
+        $table->string('restaurant_name')->nullable();
+        $table->timestamps();
+    });
+}
 
     /**
      * Reverse the migrations.

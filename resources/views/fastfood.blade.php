@@ -1,69 +1,35 @@
 @extends('sablony.sablona')
 @section('kontent')
 <section>
-            <div class="telo">
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Angus</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Bageterie Boulevard</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Big Burger</p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/fastfood/Angus'">Angus</button>
+                    <button class="karta" onclick="window.location.href='/fastfood/Bageterie'">Bageterie Boulevard</button>
+                    <button class="karta" onclick="window.location.href='/fastfood/BigBurger'">Big Burger</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Buffalo Burger Bar</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Burger King</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Delish</p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/fastfood/Buffalo'">Buffalo Burger Bar</button>
+                    <button class="karta" onclick="window.location.href='/fastfood/BurgerKing'">Burger King</button>
+                    <button class="karta" onclick="window.location.href='/fastfood/Delish'">Delish</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>FÆNCY FRIES</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>KFC</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>McDonald</p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/fastfood/FancyFries'">FÆNCY FRIES</button>
+                    <button class="karta" onclick="window.location.href='/fastfood/KFC'">KFC</button>
+                    <button class="karta" onclick="window.location.href='/fastfood/McDonald'">McDonald</button>
                 </div>
                 <div class="karty">
+                <button class="karta" onclick="window.location.href='/fastfood/NewYork'">NewYork</button>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>NewYork</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
                         <p></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
                         <p></p>
                     </div>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="col-auto"><a class="dalsi" href="">Pokračovat</a></div>
-                    <div class="col-auto"><a class="dalsi" href="">Je mi to jedno</a></div>
-                </div>
+                <div class="d-flex justify-content-center align-items-center">
+            <button type="button" class="btn btn-outline-light" onclick="window.location.href='/vyber_jidla'">Vrátit se</button>
                 <br>
             </div>
+                <br>
         </section>
         @endsection

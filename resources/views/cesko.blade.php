@@ -1,69 +1,35 @@
 @extends('sablony.sablona')
 @section('kontent')
 <section>
-            <div class="telo">
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Hospoda Na Spilce</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Lokál Pod Divadlem</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Plzeňka</p>
-                    </div>
+                <button class="karta" onclick="window.location.href='/cesko/NaSpilce'">Hospoda Na Spilce</button>
+                <button class="karta" onclick="window.location.href='/cesko/Lokal'">Lokál Pod Divadlem</button>
+                <button class="karta" onclick="window.location.href='/cesko/Plzenka'">Plzeňka</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Potrefená Husa</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>restaurace Žumbera</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Švejk - TIVOLI</p>
-                    </div>
+                <button class="karta" onclick="window.location.href='/cesko/Potrefena_husa'">Potrefená Husa</button>
+                <button class="karta" onclick="window.location.href='/cesko/Zumbera'">restaurace Žumbera</button>
+                <button class="karta" onclick="window.location.href='/cesko/Svejk_Tivoli'">Švejk - TIVOLI</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Švejk - U pětatřicátníků</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Uctívaný Velbloud</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>U Mansfelda</p>
-                    </div>
+                <button class="karta" onclick="window.location.href='/cesko/Svejk_35'">Švejk - U pětatřicátníků</button>
+                <button class="karta" onclick="window.location.href='/cesko/Velbloud'">Uctívaný Velbloud</button>
+                <button class="karta" onclick="window.location.href='/cesko/UMansfelda'">U Mansfelda</button>
                 </div>
                 <div class="karty">
+                <button class="karta" onclick="window.location.href='/cesko/UMotliku'">U Motlíků</button>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Švejk - U U Motlíků</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
                         <p></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
                         <p></p>
                     </div>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="col-auto"><a class="dalsi" href="">Pokračovat</a></div>
-                    <div class="col-auto"><a class="dalsi" href="">Je mi to jedno</a></div>
-                </div>
+                <div class="d-flex justify-content-center align-items-center">
+            <button type="button" class="btn btn-outline-light" onclick="window.location.href='/vyber_jidla'">Vrátit se</button>
                 <br>
             </div>
+                <br>
         </section>
         @endsection

@@ -1,52 +1,23 @@
-.logo>img {
-    width: 10%;
-}
-
-.hlavicka {
-    background-color: greenyellow;
-}
 
 .telo {
-    background-color: rgb(72, 255, 0);
-}
-
-.nadpis {
-    text-align: center;
-    height: 50px;
-    width: 250px;
-    background-color: gray;
-}
-
-.input {
-    height: 50px;
-    margin: 20px;
-}
-
-.dalsi {
-    margin-bottom: 20px;
-    padding: 10px;
-    margin-left: 20px;
-    background-color: whitesmoke;
-    border: 2px solid black;
-    text-align: center;
-}
-
-.dalsi:hover {
-    color: white;
-    background-color: gray;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
 }
 
 .karta {
+    width: 250px;
+    height: 125px;
     margin-top: 20px;
     margin-right: 20px;
     margin-left: 20px;
-    border: 2px solid yellow;
-    background-color: yellow;
+    border: 2px solid white;
+    background-color: rgba(127, 4, 14, 0.5);
     text-align: center;
-}
+    color: white;
+    font-weight: bold;
 
-.karta>img {
-    width: 33%;
 }
 
 .karty {
@@ -54,14 +25,158 @@
 }
 
 .karta:hover {
-    background-color: yellowgreen;
+    background-color: #7F040E;
 }
 
 .karta:active {
-    background-color: red;
+    background-color: #7F040E;
 }
 
-.vyber {
-    margin-left: 20px;
-    margin-bottom: 30px;
+.input {
+    height: 50px;
+    margin: 20px;
+}
+
+.nadpis {
+    text-align: center;
+    height: 50px;
+    width: 250px;
+    background-color: rgba(127, 4, 14, 0.5);;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255,0.2);
+    
+}
+
+.google-map {
+    padding-bottom: 55%;
+    position: relative;
+}
+
+.google-map iframe {
+    height: 90%;
+    width: 90%;
+    left: 10px;
+    top: 10px;
+    position: absolute;
+    border: 1px solid #7F040E;
+    border-radius: 5px;
+}
+
+.podnadpis{
+    margin:10px;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255,0.5);
+}
+
+.oteviraci_doba {
+    font-family: 'Arial', sans-serif;
+    background-color: rgba(127, 4, 14, 0.5);
+    margin-top: 10px;
+    margin-left: 10px; 
+    margin-bottom: 10px;
+    border: 1px solid rgba(127, 4, 14, 0.5);
+    border-radius: 5px;
+    width: 200px;  
+    text-shadow: 2px 2px 2px rgba(255, 255, 255,0.2);
+}
+
+.oteviraci_doba span {
+
+    display: inline-block;
+    width: 100px; 
+}
+
+
+.position-ref {
+    position: relative;
+}
+
+.top-right {
+    position: absolute;
+    right: 10px;
+    top: 18px;
+}
+
+
+
+.links > a {
+    color: #636b6f;
+    padding: 0 25px;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: .1rem;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.title {
+    font-size: 40px;
+    border-bottom: 2px solid;
+    padding: 12px;
+    color: #ffffff;
+}
+
+.masthead {
+    background-size: cover;
+    min-height: 100vh; /*60vh*/
+    position: relative;
+    color: #000000;
+    
+}
+
+.text {
+    font-size: 2rem;
+    margin-top: 170px !important;
+    display: flex;
+    text-shadow: 2px 2px 2px rgba(255, 255, 255,0.8);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center; 
+    font-weight: bold;
+    font-style: italic;
+}
+
+.color-overlay{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.2);
+}
+
+@media (max-width: 768px){
+    /*.masthead{
+        min-height: 30vh;
+    }*/
+    .text{
+        font-size: calc(1.525rem + 3.3vw);
+    }
+}
+
+
+footer{
+    background: #7F040E;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.btn-outline-custom {
+    color: #ffffff !important;
+    background-color: rgba(0, 0, 0, 0) !important; 
+    border-color: #D0A933 !important; 
+}
+
+.btn-outline-custom:hover {
+    color: #D0A933!important;; 
+    background-color: rgba(0, 0, 0, 0)!important;; 
+    border-color: #D0A933!important;;
+}
+
+
+body{
+    background-color: #7F040E !important;
+}
+
+.tlacitko{
+    font-weight: bold !important;
+    
 }

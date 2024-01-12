@@ -9,15 +9,26 @@
     <link rel="stylesheet" href="/css/bootstrap.min.css">
 </head>
 
-<body class="container">
-    <header>
-        <div class="hlavicka">
-            <div class="logo"><img src="/img/IMG_0033.png"></div>
-        </div>
-    </header>
+<body>
     <main>
+    <div id="wrapper">
+		<div id="content">
+            <div class="masthead" style="background-image: url('/img/background1.jpg')">
+                <div class="color-overlay d-flex justify-content-center align-items-center">
         @yield('kontent')
+                </div>
+            </div>
+        </div>
+        <footer>
+            2024 meet&eat
+        </footer>
+    </div> 
     </main>
-</body>
 
+    
+</body>
 </html>
+
+
+
+

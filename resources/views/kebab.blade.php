@@ -1,55 +1,27 @@
 @extends('sablony.sablona')
 @section('kontent')
 <section>
-            <div class="telo">
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Alanya Kebab</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Alibaba Kebab</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Ali baba Kebab</p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/kebab/Alanya'">Alanya Kebab</button>
+                    <button class="karta" onclick="window.location.href='/kebab/Alibaba_Kebab'">Alibaba Kebab</button>
+                    <button class="karta" onclick="window.location.href='/kebab/Ali_Baba_Kebab'">Ali baba Kebab</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Family Kebab</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>I love Kebab</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>King´s Kebab & Fries</p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/kebab/Family_Kebab'">Family Kebab</button>
+                    <button class="karta" onclick="window.location.href='/kebab/I_love_Kebab'">I love Kebab</button>
+                    <button class="karta" onclick="window.location.href='/kebab/JH_Kebab_House'">JH Kebab House</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Kebab Masarykova</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Kebab Tylovka</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Kebab U Tuzexu</p>
+                    <button class="karta" onclick="window.location.href='/kebab/Masarykova_Kebab'">Kebab Masarykova</button>
+                    <button class="karta" onclick="window.location.href='/kebab/Tylova_Kebab'">Kebab Tylovka</button>
+                    <button class="karta" onclick="window.location.href='/kebab/UTuzexu'">Kebab U Tuzexu</button>
                     </div>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="col-auto"><a class="dalsi" href="">Pokračovat</a></div>
-                    <div class="col-auto"><a class="dalsi" href="">Je mi to jedno</a></div>
-                </div>
+                <div class="d-flex justify-content-center align-items-center">
+            <button type="button" class="btn btn-outline-light" onclick="window.location.href='/vyber_jidla'">Vrátit se</button>
                 <br>
             </div>
+                <br>
         </section>
         @endsection

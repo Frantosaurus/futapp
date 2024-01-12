@@ -1,55 +1,28 @@
 @extends('sablony.sablona')
 @section('kontent')
 <section>
-            <div class="telo">
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Bolevecká pizzerie</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>I love Pizza</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Pizzerie Massimo</p>
-                    </div>
+                <button class="karta" onclick="window.location.href='/italie/Bolevecka_pizzerie'">Bolevecká pizzerie</button>
+                <button class="karta" onclick="window.location.href='/italie/I_love_pizza'">I love Pizza</button>
+                <button class="karta" onclick="window.location.href='/italie/Massimo'">Pizzerie Massimo</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Ristorante & Pizzerie Da Nico</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Pizzeria da pietro</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Pizzerie Da Vinci</p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/italie/Da_Nico'">Ristorante & Pizzerie Da Nico</button>
+                    <button class="karta" onclick="window.location.href='/italie/daPietro'">Pizzeria da pietro</button>
+                    <button class="karta" onclick="window.location.href='/italie/Da_Vinci'">Pizzerie Da Vinci</button>
                 </div>
                 <div class="karty">
+                    <button class="karta" onclick="window.location.href='/italie/Mamma_Mia'">Pizzerie Mamma Mia</button>
+                    <button class="karta" onclick="window.location.href='/italie/Rango'">Rango restaurant</button>       
                     <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Pizzerie Mamma Mia</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Rango restaurant</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
                         <p></p>
                     </div>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="col-auto"><a class="dalsi" href="">Pokračovat</a></div>
-                    <div class="col-auto"><a class="dalsi" href="">Je mi to jedno</a></div>
-                </div>
+                <div class="d-flex justify-content-center align-items-center">
+            <button type="button" class="btn btn-outline-light" onclick="window.location.href='/vyber_jidla'">Vrátit se</button>
                 <br>
             </div>
+                <br>
         </section>
         @endsection

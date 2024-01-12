@@ -1,55 +1,26 @@
 @extends('sablony.sablona')
 @section('kontent')
 <section>
-            <div class="telo">
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Bombay Express</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>BUDDHA</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Everest</p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/indie/Bombay_express'">Bombay Express</button>
+                    <button class="karta" onclick="window.location.href='/indie/BUDDHA'">Buddha</button>
+                    <button class="karta" onclick="window.location.href='/indie/Everest'">Everest</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Gandhi</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Ganesh</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Indian Zaika Restaurant</p>
-                    </div>
+                <button class="karta" onclick="window.location.href='/indie/Gandhi'">Gandhi</button>
+                <button class="karta" onclick="window.location.href='/indie/Ganesh'">Ganesh</button>
+                <button class="karta" onclick="window.location.href='/indie/Zaika'">Indian Zaika Restaurant</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Kanchenjunga</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Kathmandu</p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/IMG_0033.png">
-                        <p>Namaste</p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/indie/Kanchenjunga'">Kanchenjunga</button>
+                    <button class="karta" onclick="window.location.href='/indie/Kathmandu'">Kathmandu</button>
+                    <button class="karta" onclick="window.location.href='/indie/Namaste'">Namaste</button>
                 </div>
                 <br>
-                <div class="row">
-                    <div class="col-auto"><a class="dalsi" href="">Pokračovat</a></div>
-                    <div class="col-auto"><a class="dalsi" href="">Je mi to jedno</a></div>
-                </div>
+                <div class="d-flex justify-content-center align-items-center">
+            <button type="button" class="btn btn-outline-light" onclick="window.location.href='/vyber_jidla'">Vrátit se</button>
                 <br>
             </div>
+                <br>
         </section>
         @endsection

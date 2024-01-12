@@ -1,19 +1,23 @@
 @extends('sablony.sablona')
 @section('kontent')
-       <section>
-            <div class="telo">
-                <div class="nadpis col-auto">
-                    <h1>Kdy máš čas?</h1>
+    <div class="text">Kdy máte čas?
+        <form action="{{ route('casToCache') }}" method="POST">
+            @csrf
+            <div class="d-flex flex-column justify-content-center align-items-center mb-3" >
+                <div class="d-flex justify-content-center align-items-center col-md-4 col-12">
+                    <input type="text" placeholder="Den" class="input mb-3" name="den">
                 </div>
-                <div class="row">
-                    <div class="col-12"><input placeholder="Den" class="input"></div>
-                    <div class="col-md-6 col-12"><input placeholder="Od kdy?" class="input"></div>
-                    <div class="col-md-6 col-12"><input placeholder="Do kdy?" class="input"></div>
+                <div class="d-flex justify-content-center align-items-center col-md-4 col-12">
+                    <input type="text" placeholder="Od kdy?" class="input mb-3" name="od_kdy">
                 </div>
-                <div class="row">
-                    <div class="col-auto"><a class="dalsi" href="vyber_jidla.html">Uložit a pokračovat</a></div>
+                <div class="d-flex justify-content-center align-items-center col-md-4 col-12">
+                    <input type="text" placeholder="Do kdy?" class="input mb-3" name="do_kdy">
                 </div>
-                <br>
             </div>
-        </section>
-        @endsection
+            <div class="d-flex justify-content-center align-items-center">
+                <button type="button" class="btn btn-outline-dark" onclick="window.location.href='/zakladni_udaje'" style="margin-right: 30px;">Vrátit se</button>
+                <button type="submit" class="btn btn-outline-dark">Pokračovat</button>
+            </div>
+        </div>
+    </form>
+@endsection
