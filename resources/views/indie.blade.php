@@ -2,46 +2,19 @@
 @section('kontent')
 <section>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Bombay_express') }}">Bombay Express</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('BUDDHA') }}">Buddha</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Everest') }}">Everest</a></p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/indie/Bombay_express'">Bombay Express</button>
+                    <button class="karta" onclick="window.location.href='/indie/BUDDHA'">Buddha</button>
+                    <button class="karta" onclick="window.location.href='/indie/Everest'">Everest</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Gandhi') }}">Gandhi</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Ganesh') }}">Ganesh</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Zaika') }}">Indian Zaika Restaurant</a></p>
-                    </div>
+                <button class="karta" onclick="window.location.href='/indie/Gandhi'">Gandhi</button>
+                <button class="karta" onclick="window.location.href='/indie/Ganesh'">Ganesh</button>
+                <button class="karta" onclick="window.location.href='/indie/Zaika'">Indian Zaika Restaurant</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Kanchenjunga') }}">Kanchenjunga</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Kathmandu') }}">Kathmandu</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Namaste') }}">Namaste</a></p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/indie/Kanchenjunga'">Kanchenjunga</button>
+                    <button class="karta" onclick="window.location.href='/indie/Kathmandu'">Kathmandu</button>
+                    <button class="karta" onclick="window.location.href='/indie/Namaste'">Namaste</button>
                 </div>
                 <br>
                 <div class="d-flex justify-content-center align-items-center">

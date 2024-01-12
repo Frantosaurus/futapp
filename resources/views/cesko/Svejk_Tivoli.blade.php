@@ -33,8 +33,8 @@
                 <input type="hidden" name="restaurant_name" value="vejk restaurant a pension TIVOLI">
                 <input type="hidden" name="restaurant_type" value="Česká kuchyně">
                 <div class="d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-outline-light" onclick="window.location.href='/cesko'" style="margin-right: 30px;">Vrátit se</button>
-                <button type="submit" class="btn btn-outline-light">Pokračovat</button>
+                <button type="button" class="btn btn-outline-dark" onclick="window.location.href='/cesko'" style="margin-right: 30px;">Vrátit se</button>
+                <button type="submit" class="btn btn-outline-dark">Pokračovat</button>
                 </div>
                 </form>
              </div>

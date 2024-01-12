@@ -2,16 +2,9 @@
 @section('kontent')
 <section>
                 <div class="karty">
+                <button class="karta" onclick="window.location.href='/mexico/La_Chica'">La Chica | Casa Mexicana</button>
+                <button class="karta" onclick="window.location.href='/mexico/Pancho'">Pancho's</button>
                     <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('La_Chica') }}">La Chica | Casa Mexicana</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Pancho') }}">Pancho's</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
                         <p></p>
                     </div>
                 </div>

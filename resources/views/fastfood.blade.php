@@ -2,58 +2,26 @@
 @section('kontent')
 <section>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Angus') }}">Angus</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Bageterie') }}">Bageterie Boulevard</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('BigBurger') }}">Big Burger</a></p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/fastfood/Angus'">Angus</button>
+                    <button class="karta" onclick="window.location.href='/fastfood/Bageterie'">Bageterie Boulevard</button>
+                    <button class="karta" onclick="window.location.href='/fastfood/BigBurger'">Big Burger</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Buffalo') }}">Buffalo Burger Bar</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('BurgerKing') }}">Burger King</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Delish') }}">Delish</a></p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/fastfood/Buffalo'">Buffalo Burger Bar</button>
+                    <button class="karta" onclick="window.location.href='/fastfood/BurgerKing'">Burger King</button>
+                    <button class="karta" onclick="window.location.href='/fastfood/Delish'">Delish</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('FancyFries') }}">FÆNCY FRIES</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('KFC') }}">KFC</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('McDonald') }}">McDonald</a></p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/fastfood/FancyFries'">FÆNCY FRIES</button>
+                    <button class="karta" onclick="window.location.href='/fastfood/KFC'">KFC</button>
+                    <button class="karta" onclick="window.location.href='/fastfood/McDonald'">McDonald</button>
                 </div>
                 <div class="karty">
+                <button class="karta" onclick="window.location.href='/fastfood/NewYork'">NewYork</button>
                     <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('NewYork') }}">NewYork</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
                         <p></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/logo.png">
                         <p></p>
                     </div>
                 </div>
