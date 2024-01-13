@@ -184,3 +184,18 @@ body{
     
 }
 
+.telo {
+    background-color: rgba(222, 240, 244, 0.9);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+.title {
+    text-align: center;
+    height: 50px;
+    width: 250px;
+    background-color: #7F040E; /* Nová barva pro nadpisy */
+    text-shadow: 2px 2px 2px rgba(255, 255, 255, 0.2);
+    color: white; /* Barva textu nadpisu */
+}
