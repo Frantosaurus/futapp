@@ -1,6 +1,7 @@
 @extends('sablony.sablona')
 @section('kontent')
-    <div class="text">Kdy máte čas?
+    <div class="text">
+<h1>Kdy máte čas?</h1>
         <form action="{{ route('casToCache') }}" method="POST">
             @csrf
             <div class="d-flex flex-column justify-content-center align-items-center mb-3" >

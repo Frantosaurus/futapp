@@ -2,7 +2,7 @@
 @section('kontent')
 <section>
                     <div class="text">
-                         Základní údaje
+                         <h1>Základní údaje</h1>
                     <div class="row">
                         <form action="{{ route('zakladni_udajeToCacheToCache') }}" method="POST">
                             @csrf
