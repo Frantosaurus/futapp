@@ -64,7 +64,7 @@
                 <input type="hidden" name="restaurant_name" value="Je mi to jedno">
                 <input type="hidden" name="restaurant_type" value="Fastfood">
                 <div class="d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-outline-light" onclick="window.location.href='/cas'" style="margin-right: 30px;">Vrátit se</button>
+                <button type="button" class="btn btn-outline-light" onclick="window.location.href='/vyber_jidla'" style="margin-right: 30px;">Vrátit se</button>
                 <button type="submit" class="btn btn-outline-light">Je mi to jedno</button>
                 </div>
                 </form>
