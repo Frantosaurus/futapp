@@ -14,9 +14,7 @@
                 <div class="karty">
                     <button class="karta" onclick="window.location.href='/fastfood'">Fastfood</button>
                     <button class="karta" onclick="window.location.href='/menza'">Menza</button>
-                    <div class="karta">
-                        <p></p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/cesko/UMansfelda'" style="visibility: hidden;" disabled>U Mansfelda</button>
                 </div>
                 <br>
                 <form action="{{ route('celamezipametToCacheAndSaveToDatabase') }}" method="POST">
