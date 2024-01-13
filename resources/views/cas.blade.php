@@ -15,8 +15,8 @@
                 </div>
             </div>
             <div class="d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-outline-dark" onclick="window.location.href='/zakladni_udaje'" style="margin-right: 30px;">Vrátit se</button>
-                <button type="submit" class="btn btn-outline-dark">Pokračovat</button>
+                <button type="button" class="btn btn-outline-dark tlacitko" onclick="window.location.href='/zakladni_udaje'" style="margin-right: 30px;">Vrátit se</button>
+                <button type="submit" class="btn btn-outline-dark tlacitko">Pokračovat</button>
             </div>
         </div>
     </form>
