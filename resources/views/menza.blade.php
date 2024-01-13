@@ -1,18 +1,10 @@
 @extends('sablony.sablona')
 @section('kontent')
 <section>
-            <div class="telo">
                 <div class="karty">
+                <button class="karta" onclick="window.location.href='/menza/Menza_Bory'">Menza - Bory</button>
+                <button class="karta" onclick="window.location.href='/menza/Menza_Kollarova'">Menza - Kollárová</button>
                     <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Menza_Bory') }}">Menza - Bory</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Menza_Kollarova') }}">Menza - Kollárová</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
                         <p></p>
                     </div>
                 </div>
@@ -26,5 +18,4 @@
                 <button type="submit" class="btn btn-outline-light">Je mi to jedno</button>
                 </div>
                 </form>
-        </section>
         @endsection

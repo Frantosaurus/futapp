@@ -1,60 +1,27 @@
 @extends('sablony.sablona')
 @section('kontent')
 <section>
-            <div class="telo">
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('NaSpilce') }}">Hospoda Na Spilce</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Lokal') }}">Lokál Pod Divadlem</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Plzenka') }}">Plzeňka</a></p>
-                    </div>
+                <button class="karta" onclick="window.location.href='/cesko/NaSpilce'">Hospoda Na Spilce</button>
+                <button class="karta" onclick="window.location.href='/cesko/Lokal'">Lokál Pod Divadlem</button>
+                <button class="karta" onclick="window.location.href='/cesko/Plzenka'">Plzeňka</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Potrefena_husa') }}">Potrefená Husa</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Zumbera') }}">restaurace Žumbera</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Svejk_Tivoli') }}">Švejk - TIVOLI</a></p>
-                    </div>
+                <button class="karta" onclick="window.location.href='/cesko/Potrefena_husa'">Potrefená Husa</button>
+                <button class="karta" onclick="window.location.href='/cesko/Zumbera'">restaurace Žumbera</button>
+                <button class="karta" onclick="window.location.href='/cesko/Svejk_Tivoli'">Švejk - TIVOLI</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Svejk_35') }}">Švejk - U pětatřicátníků</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Velbloud') }}">Uctívaný Velbloud</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('UMansfelda') }}">U Mansfelda</a></p>
-                    </div>
+                <button class="karta" onclick="window.location.href='/cesko/Svejk_35'">Švejk - U pětatřicátníků</button>
+                <button class="karta" onclick="window.location.href='/cesko/Velbloud'">Uctívaný Velbloud</button>
+                <button class="karta" onclick="window.location.href='/cesko/UMansfelda'">U Mansfelda</button>
                 </div>
                 <div class="karty">
+                <button class="karta" onclick="window.location.href='/cesko/UMotliku'">U Motlíků</button>
                     <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('UMotliku') }}">U Motlíků</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
                         <p></p>
                     </div>
                     <div class="karta">
-                        <img src="/img/logo.png">
                         <p></p>
                     </div>
                 </div>

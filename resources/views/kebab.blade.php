@@ -1,47 +1,20 @@
 @extends('sablony.sablona')
 @section('kontent')
 <section>
-            <div class="telo">
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Alanya') }}">Alanya Kebab</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Alibaba_Kebab') }}">Alibaba Kebab</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Ali_Baba_Kebab') }}">Ali baba Kebab</a></p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/kebab/Alanya'">Alanya Kebab</button>
+                    <button class="karta" onclick="window.location.href='/kebab/Alibaba_Kebab'">Alibaba Kebab</button>
+                    <button class="karta" onclick="window.location.href='/kebab/Ali_Baba_Kebab'">Ali baba Kebab</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Family_Kebab') }}">Family Kebab</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('I_love_Kebab') }}">I love Kebab</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('JH_Kebab_House') }}">JH Kebab House</a></p>
-                    </div>
+                    <button class="karta" onclick="window.location.href='/kebab/Family_Kebab'">Family Kebab</button>
+                    <button class="karta" onclick="window.location.href='/kebab/I_love_Kebab'">I love Kebab</button>
+                    <button class="karta" onclick="window.location.href='/kebab/JH_Kebab_House'">JH Kebab House</button>
                 </div>
                 <div class="karty">
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Masarykova_Kebab') }}">Kebab Masarykova</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('Tylova_Kebab') }}">Kebab Tylovka</a></p>
-                    </div>
-                    <div class="karta">
-                        <img src="/img/logo.png">
-                        <p><a href="{{ route('UTuzexu') }}">Kebab U Tuzexu</a></p>
+                    <button class="karta" onclick="window.location.href='/kebab/Masarykova_Kebab'">Kebab Masarykova</button>
+                    <button class="karta" onclick="window.location.href='/kebab/Tylova_Kebab'">Kebab Tylovka</button>
+                    <button class="karta" onclick="window.location.href='/kebab/UTuzexu'">Kebab U Tuzexu</button>
                     </div>
                 </div>
                 <br>

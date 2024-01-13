@@ -14,9 +14,9 @@
     <div id="wrapper">
 		<div id="content">
             <div class="masthead" style="background-image: url('/img/background1.jpg')">
-                <div class="color-overlay d-flex justify-content-center align-items-center">
+                
         @yield('kontent')
-                </div>
+                
             </div>
         </div>
         <footer>

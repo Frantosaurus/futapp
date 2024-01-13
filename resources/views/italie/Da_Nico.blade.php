@@ -33,8 +33,8 @@
                 <input type="hidden" name="restaurant_name" value="Ristorante & Pizzerie Da Nico">
                 <input type="hidden" name="restaurant_type" value="Italská kuchyně">
                 <div class="d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-outline-light" onclick="window.location.href='/cesko'" style="margin-right: 30px;">Vrátit se</button>
-                <button type="submit" class="btn btn-outline-light">Pokračovat</button>
+                <button type="button" class="btn btn-outline-dark" onclick="window.location.href='/cesko'" style="margin-right: 30px;">Vrátit se</button>
+                <button type="submit" class="btn btn-outline-dark">Pokračovat</button>
                 </div>
                 </form>
              </div>
