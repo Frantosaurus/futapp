@@ -23,6 +23,7 @@
 
 .karty {
     display: flex;
+    justify-content: center
 }
 
 .karta:hover {

@@ -4,7 +4,7 @@
                 <div class="karty">
                 <button class="karta" onclick="window.location.href='/mexico/La_Chica'">La Chica | Casa Mexicana</button>
                 <button class="karta" onclick="window.location.href='/mexico/Pancho'">Pancho's</button>
-                <button class="karta" onclick="window.location.href='/cesko/UMansfelda'" style="visibility: hidden;" disabled>U Mansfelda</button>
+                
                 </div>
                 <br>
                 <form action="{{ route('celamezipametToCacheAndSaveToDatabase') }}" method="POST">

@@ -4,7 +4,6 @@
                 <div class="karty">
                 <button class="karta" onclick="window.location.href='/menza/Menza_Bory'">Menza - Bory</button>
                 <button class="karta" onclick="window.location.href='/menza/Menza_Kollarova'">Menza - Kollárová</button>
-                <button class="karta" onclick="window.location.href='/cesko/UMansfelda'" style="visibility: hidden;" disabled>U Mansfelda</button>
                 </div>
                 <br>
                 <form action="{{ route('celamezipametToCacheAndSaveToDatabase') }}" method="POST">
