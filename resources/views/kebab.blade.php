@@ -16,7 +16,6 @@
                     <button class="karta" onclick="window.location.href='/kebab/Tylova_Kebab'">Kebab Tylovka</button>
                     <button class="karta" onclick="window.location.href='/kebab/UTuzexu'">Kebab U Tuzexu</button>
                     </div>
-                </div>
                 <br>
                 <form action="{{ route('celamezipametToCacheAndSaveToDatabase') }}" method="POST">
                 @csrf
