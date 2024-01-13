@@ -22,7 +22,7 @@
                             <div><strong><span>Pondělí:</span></strong> 10:30-22:30</div>
                             <div><strong><span>Úterý:</span></strong> 10:30-22:30</div>
                             <div><strong><span>Středa:</span></strong> 10:30-22:30</div>
-                            <div><strong><span>Čtvrtek:</span></strong> 10:30-22:30<</div>
+                            <div><strong><span>Čtvrtek:</span></strong> 10:30-22:30</div>
                             <div><strong><span>Pátek:</span></strong> 11:30-24</div>
                             <div><strong><span>Sobota:</span></strong> 11:30-24</div>
                             <div><strong><span>Neděle:</span></strong> 11:30-21</div>
