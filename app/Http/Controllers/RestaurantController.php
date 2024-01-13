@@ -7,6 +7,7 @@ use App\Models\TypyRestauraci;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\DB;
 
 class RestaurantController extends Controller
 {
@@ -28,6 +29,7 @@ class RestaurantController extends Controller
         $validatedData = $request->validate([
             'name' => 'required|max:25',
             'last_name' => 'required|max:25',
+            'contact' => 'required|max:25',
 
         ]);
     
@@ -35,6 +37,7 @@ class RestaurantController extends Controller
     
         $uzivatel->name = $validatedData["name"];
         $uzivatel->last_name = $validatedData["last_name"];
+        $uzivatel->contact = $validatedData["contact"];
 
     
         $uzivatel->save();
@@ -77,7 +80,7 @@ class RestaurantController extends Controller
     {
         // Uložení dat do cache
         $userData = Cache::get('user_data', []);
-        $newData = $request->only(['name', 'last_name']);
+        $newData = $request->only(['name', 'last_name','contact']);
         $userData = array_merge($userData, $newData);
         Cache::put('user_data', $userData, 600);
 
@@ -112,6 +115,7 @@ class RestaurantController extends Controller
     $uzivatel = new User();
     $uzivatel->name = $userData['name'] ?? null;
     $uzivatel->last_name = $userData['last_name'] ?? null;
+    $uzivatel->contact = $userData['contact'] ?? null;
     $uzivatel->den = $userData['den'] ?? null;
     $uzivatel->od_kdy = $userData['od_kdy'] ?? null;
     $uzivatel->do_kdy = $userData['do_kdy'] ?? null;
@@ -126,10 +130,27 @@ class RestaurantController extends Controller
 
 public function match()
 {
-    $users = User::all();
-    return view('match', ['users' => $users]);
-}
+    $latestUser = User::latest()->first();
 
+    $peopleWithSameRestaurant = User::where('restaurant_name', $latestUser->restaurant_name)
+        ->where('restaurant_type', $latestUser->restaurant_type)
+        ->where('den', $latestUser->den)
+        ->where('od_kdy', $latestUser->od_kdy)
+        ->where('id', '!=', $latestUser->id) // Vynechání posledního přidaného záznamu
+        ->get();
+
+    $peopleWithSameTypeDifferentLocation = User::where('restaurant_type', $latestUser->restaurant_type)
+        ->where('den', $latestUser->den)
+        ->where('od_kdy', $latestUser->od_kdy)
+        ->where('restaurant_name', '!=', $latestUser->restaurant_name)
+        ->get();
+
+    return view('match', [
+        'latestUser' => $latestUser,
+        'peopleWithSameRestaurant' => $peopleWithSameRestaurant,
+        'peopleWithSameTypeDifferentLocation' => $peopleWithSameTypeDifferentLocation,
+    ]);
+}
     /*
 
 

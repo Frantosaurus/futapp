@@ -13,6 +13,9 @@
                                 <div class="d-flex justify-content-center align-items-center col-md-4 col-12">
                                     <input type="text" placeholder="Přijmení" class="input mb-3" name="last_name">
                                 </div>
+                                <div class="d-flex justify-content-center align-items-center col-md-4 col-12">
+                                    <input type="text" placeholder="Kontakt na vás" class="input mb-3" name="contact">
+                                </div>
                                 <div class="d-flex justify-content-center align-items-center">
                                     <button type="button" class="btn btn-outline-dark tlacitko" onclick="window.location.href='/hlavni_stranka'" style="margin-right: 30px;">Vrátit se</button>
                                     <button type="submit" class="btn btn-outline-dark tlacitko">Pokračovat</button>
