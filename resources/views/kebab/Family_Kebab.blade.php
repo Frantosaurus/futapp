@@ -33,8 +33,8 @@
                 <input type="hidden" name="restaurant_name" value="Family kebab">
                 <input type="hidden" name="restaurant_type" value="Kebab">
                 <div class="d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-outline-dark" onclick="window.location.href='/cesko'" style="margin-right: 30px;">Vrátit se</button>
-                <button type="submit" class="btn btn-outline-dark">Pokračovat</button>
+                <button type="button" class="btn btn-outline-dark tlacitko" onclick="window.location.href='/cesko'" style="margin-right: 30px;">Vrátit se</button>
+                <button type="submit" class="btn btn-outline-dark tlacitko">Pokračovat</button>
                 </div>
                 </form>
              </div>

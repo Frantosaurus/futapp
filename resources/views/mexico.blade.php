@@ -4,9 +4,7 @@
                 <div class="karty">
                 <button class="karta" onclick="window.location.href='/mexico/La_Chica'">La Chica | Casa Mexicana</button>
                 <button class="karta" onclick="window.location.href='/mexico/Pancho'">Pancho's</button>
-                    <div class="karta">
-                        <p></p>
-                    </div>
+                <button class="karta" onclick="window.location.href='/cesko/UMansfelda'" style="visibility: hidden;" disabled>U Mansfelda</button>
                 </div>
                 <br>
                 <form action="{{ route('celamezipametToCacheAndSaveToDatabase') }}" method="POST">
@@ -14,8 +12,8 @@
                 <input type="hidden" name="restaurant_name" value="Je mi to jedno">
                 <input type="hidden" name="restaurant_type" value="Mexická kuchyně">
                 <div class="d-flex justify-content-center align-items-center">
-                <button type="button" class="btn btn-outline-light" onclick="window.location.href='/vyber_jidla'" style="margin-right: 30px;">Vrátit se</button>
-                <button type="submit" class="btn btn-outline-light">Je mi to jedno</button>
+                <button type="button" class="btn btn-outline-light tlacitko" onclick="window.location.href='/vyber_jidla'" style="margin-right: 30px;">Vrátit se</button>
+                <button type="submit" class="btn btn-outline-light tlacitko">Je mi to jedno</button>
                 </div>
                 </form>
         </section>
