@@ -15,9 +15,10 @@
         </div>
 
         <div class="row">
-            <div class="col-md-6 col-12 vyber">
-                <h2 class="title">Lidé kteří si vybrali stejnou restauraci jako Vy:</h2>
-                @foreach($peopleWithSameRestaurant as $person)
+            @if(count($peopleWithSameRestaurant) > 0)
+                <div class="col-md-6 col-12 vyber">
+                    <h2 class="title">Lidé kteří si vybrali stejnou restauraci jako Vy:</h2>
+                    @foreach($peopleWithSameRestaurant as $person)
                     <div class="karta">
                         <p>Jméno: {{ $person->name }}</p>
                         <p>Příjmení: {{ $person->last_name }}</p>
@@ -31,10 +32,11 @@
                     </div>
                 @endforeach
             </div>
-
-            <div class="col-md-6 col-12 vyber">
-                <h2 class="title">Lidé kteří si vybrali stejný typ restaurace jako Vy, ale chtějí jinam:</h2>
-                @foreach($peopleWithSameTypeDifferentLocation as $person)
+            @endif
+            @if(count($peopleWithSameTypeDifferentLocation) > 0)
+                <div class="col-md-6 col-12 vyber">
+                    <h2 class="title">Lidé kteří si vybrali stejný typ restaurace jako Vy, ale chtějí jinam:</h2>
+                    @foreach($peopleWithSameTypeDifferentLocation as $person)
                     <div class="karta">
                         <p>Jméno: {{ $person->name }}</p>
                         <p>Příjmení: {{ $person->last_name }}</p>
@@ -46,8 +48,12 @@
                         <p>Konkrétní restaurace: {{ $person->restaurant_name }}</p>
                         <hr>
                     </div>
-                @endforeach
-            </div>
+                    @endforeach
+                </div>
+            @endif
+            @if(count($peopleWithSameRestaurant) == 0 && count($peopleWithSameTypeDifferentLocation) == 0)
+                <p class="no-matches-message">Je nám líto, ale bohužel jsme nikoho nenašli. Ale nezoufej, máme tě uloženého a třeba se ti za chvíli někdo ozve :D</p>
+            @endif
         </div>
     </div>
 </section>
