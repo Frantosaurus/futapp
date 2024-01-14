@@ -5,12 +5,12 @@
         <form id="casForm" action="{{ route('casToCache') }}" method="POST" onsubmit="return validateForm()">
             @csrf
             <div class="d-flex flex-column justify-content-center align-items-center mb-3">
-                <div class="col-md-4 col-12">
-                    <label for="den">Den</label>
+                <div class="col-12">
+                    <label for="den">Den</label><br>
                     <input type="date" id="den" placeholder="Den" class="input mb-3" name="den" required min="{{ now()->toDateString() }}">
                 </div>
-                <div class="col-md-4 col-12">
-                    <label for="od_kdy_hours">Od kdy</label>
+                <div class="col-12">
+                    <label for="od_kdy_hours">Od kdy</label><br>
                     <select name="od_kdy_hours" id="od_kdy_hours" class="input mb-3" required>
                         @for ($hour = 6; $hour < 24; $hour++)
                             @for ($minute = 0; $minute < 60; $minute += 15)
@@ -19,8 +19,8 @@
                         @endfor
                     </select>
                 </div>
-                <div class="col-md-4 col-12">
-                    <label for="do_kdy_hours">Do kdy</label>
+                <div class="col-12">
+                    <label for="do_kdy_hours">Do kdy</label><br>
                     <select name="do_kdy_hours" id="do_kdy_hours" class="input mb-3" required>
                         <option value="je_mi_to_jedno">Je mi to jedno</option>
                         @for ($hour = 6; $hour < 24; $hour++)
