@@ -11,16 +11,16 @@
 
 <body>
 
-        <div id="wrapper">
-            <div id="content">
-                <div class="masthead" style="background-image: url('/img/background1.jpg');">
-                    @yield('kontent')
-                </div>
+    <div id="wrapper">
+        <div id="content">
+            <div class="masthead" style="background-image: url('/img/background1.jpg');">
+                @yield('kontent')
             </div>
-            <footer>
-                2024 meet&eat
-            </footer>
         </div>
+        <footer>
+            2024 meet&eat
+        </footer>
+    </div>
 
 </body>
 

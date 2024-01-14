@@ -107,4 +107,3 @@ Route::get('/Menza/Menza_Kollarova', [RestaurantController::class, 'Menza_Kollar
 
 Route::get('/mexico/La_Chica', [RestaurantController::class, 'La_Chica'])->name("La_Chica");
 Route::get('/mexico/Pancho', [RestaurantController::class, 'Pancho'])->name("Pancho");
-
