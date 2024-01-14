@@ -92,10 +92,10 @@ class RestaurantController extends Controller
     {
         // Uložení dat do cache
         $userData = Cache::get('user_data', []);
-        $newData = $request->only(['den', 'od_kdy', 'do_kdy']);
+        $newData = $request->only(['den', 'od_kdy_hours', 'do_kdy_hours']); // Oprava názvů sloupců
         $userData = array_merge($userData, $newData);
         Cache::put('user_data', $userData, 600);
-
+    
         // Přesměrování na další stránku
         return redirect()->route('vyber_jidla');
     }
@@ -117,8 +117,8 @@ class RestaurantController extends Controller
     $uzivatel->last_name = $userData['last_name'] ?? null;
     $uzivatel->contact = $userData['contact'] ?? null;
     $uzivatel->den = $userData['den'] ?? null;
-    $uzivatel->od_kdy = $userData['od_kdy'] ?? null;
-    $uzivatel->do_kdy = $userData['do_kdy'] ?? null;
+    $uzivatel->od_kdy = $userData['od_kdy_hours'] ?? null; // Oprava názvu sloupce
+    $uzivatel->do_kdy = $userData['do_kdy_hours'] ?? null; // Oprava názvu sloupce
     $uzivatel->restaurant_type = $userData['restaurant_type'];
     $uzivatel->restaurant_name = $userData['restaurant_name'];
     $uzivatel->save();
@@ -132,16 +132,42 @@ public function match()
 {
     $latestUser = User::latest()->first();
 
+    // Přidání časových podmínek pro překrývající se intervaly
     $peopleWithSameRestaurant = User::where('restaurant_name', $latestUser->restaurant_name)
-        ->where('restaurant_type', $latestUser->restaurant_type)
         ->where('den', $latestUser->den)
-        ->where('od_kdy', $latestUser->od_kdy)
-        ->where('id', '!=', $latestUser->id) // Vynechání posledního přidaného záznamu
+        ->where(function($query) use ($latestUser) {
+            $query->where(function($q) use ($latestUser) {
+                $q->where('od_kdy', '>=', $latestUser->od_kdy)
+                  ->where('od_kdy', '<=', $latestUser->do_kdy);
+            })
+            ->orWhere(function($q) use ($latestUser) {
+                $q->where('do_kdy', '>=', $latestUser->od_kdy)
+                  ->where('do_kdy', '<=', $latestUser->do_kdy);
+            })
+            ->orWhere(function($q) use ($latestUser) {
+                $q->where('od_kdy', '<=', $latestUser->od_kdy)
+                  ->where('do_kdy', '>=', $latestUser->do_kdy);
+            });
+        })
+        ->where('id', '!=', $latestUser->id)
         ->get();
 
     $peopleWithSameTypeDifferentLocation = User::where('restaurant_type', $latestUser->restaurant_type)
         ->where('den', $latestUser->den)
-        ->where('od_kdy', $latestUser->od_kdy)
+        ->where(function($query) use ($latestUser) {
+            $query->where(function($q) use ($latestUser) {
+                $q->where('od_kdy', '>=', $latestUser->od_kdy)
+                  ->where('od_kdy', '<=', $latestUser->do_kdy);
+            })
+            ->orWhere(function($q) use ($latestUser) {
+                $q->where('do_kdy', '>=', $latestUser->od_kdy)
+                  ->where('do_kdy', '<=', $latestUser->do_kdy);
+            })
+            ->orWhere(function($q) use ($latestUser) {
+                $q->where('od_kdy', '<=', $latestUser->od_kdy)
+                  ->where('do_kdy', '>=', $latestUser->do_kdy);
+            });
+        })
         ->where('restaurant_name', '!=', $latestUser->restaurant_name)
         ->get();
 
