@@ -13,7 +13,7 @@
     <main>
     <div id="wrapper">
 		<div id="content">
-            <div class="masthead" style="background-image: url('/img/background1.jpg')">
+        <div class="masthead" style="background-image: url('/img/background1.jpg'); background-repeat: repeat;">
                 
         @yield('kontent')
                 
