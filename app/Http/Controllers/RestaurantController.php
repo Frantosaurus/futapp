@@ -132,24 +132,49 @@ public function match()
 {
     $latestUser = User::latest()->first();
 
-    // Podmínky pro výběr záznamů z databáze
-    $conditions = [
-        ['den', '=', $latestUser->den],
-        ['od_kdy', '=', $latestUser->od_kdy],
-        ['id', '!=', $latestUser->id], // Vynechání posledního přidaného záznamu
-    ];
+    // Přidání časových podmínek pro překrývající se intervaly
+    $peopleWithSameRestaurant = User::where('restaurant_name', $latestUser->restaurant_name)
+        ->where('den', $latestUser->den)
+        ->where(function($query) use ($latestUser) {
+            $query->where(function($q) use ($latestUser) {
+                $q->where('od_kdy', '>=', $latestUser->od_kdy)
+                  ->where('od_kdy', '<=', $latestUser->do_kdy);
+            })
+            ->orWhere(function($q) use ($latestUser) {
+                $q->where('do_kdy', '>=', $latestUser->od_kdy)
+                  ->where('do_kdy', '<=', $latestUser->do_kdy);
+            })
+            ->orWhere(function($q) use ($latestUser) {
+                $q->where('od_kdy', '<=', $latestUser->od_kdy)
+                  ->where('do_kdy', '>=', $latestUser->do_kdy);
+            });
+        })
+        ->where('id', '!=', $latestUser->id)
+        ->get();
 
-    // Pokud je vybrán "Je mi to jedno", nepoužijeme podmínku pro typ restaurace
-    if ($latestUser->restaurant_type !== 'Je mi to jedno') {
-        $conditions[] = ['restaurant_type', '=', $latestUser->restaurant_type];
-    }
-
-    $peopleWithSameTime = User::where($conditions)->get();
+    $peopleWithSameTypeDifferentLocation = User::where('restaurant_type', $latestUser->restaurant_type)
+        ->where('den', $latestUser->den)
+        ->where(function($query) use ($latestUser) {
+            $query->where(function($q) use ($latestUser) {
+                $q->where('od_kdy', '>=', $latestUser->od_kdy)
+                  ->where('od_kdy', '<=', $latestUser->do_kdy);
+            })
+            ->orWhere(function($q) use ($latestUser) {
+                $q->where('do_kdy', '>=', $latestUser->od_kdy)
+                  ->where('do_kdy', '<=', $latestUser->do_kdy);
+            })
+            ->orWhere(function($q) use ($latestUser) {
+                $q->where('od_kdy', '<=', $latestUser->od_kdy)
+                  ->where('do_kdy', '>=', $latestUser->do_kdy);
+            });
+        })
+        ->where('restaurant_name', '!=', $latestUser->restaurant_name)
+        ->get();
 
     return view('match', [
         'latestUser' => $latestUser,
-        'peopleWithSameRestaurant' => $peopleWithSameTime,
-        'peopleWithSameTypeDifferentLocation' => [],
+        'peopleWithSameRestaurant' => $peopleWithSameRestaurant,
+        'peopleWithSameTypeDifferentLocation' => $peopleWithSameTypeDifferentLocation,
     ]);
 }
     /*
