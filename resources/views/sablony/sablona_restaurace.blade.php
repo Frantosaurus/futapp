@@ -10,25 +10,18 @@
 </head>
 
 <body>
-    <main>
+
     <div id="wrapper">
-		<div id="content">
-        <div class="masthead" style="background-image: url('/img/background1.jpg'); background-repeat: repeat;">
-                
-        @yield('kontent')
-                
+        <div id="content">
+            <div class="masthead" style="background-image: url('/img/background1.jpg');">
+                @yield('kontent')
             </div>
         </div>
         <footer>
             2024 meet&eat
         </footer>
-    </div> 
-    </main>
+    </div>
 
-    
 </body>
+
 </html>
-
-
-
-
