@@ -1,6 +1,7 @@
 <?php
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RestaurantController;
+use App\Http\Controllers\DetailRestauraceController;
 
 
 
@@ -14,11 +15,9 @@ Route::get('/vyber_jidla', [RestaurantController::class, 'vyber_jidla'])->name('
 
 Route::get('/vyber_jidla_z_databaze', [RestaurantController::class, 'vyber_jidla_z_databaze'])->name('vyber_jidla_z_databaze');
 
-Route::get('/detail_restaurace/{id}', [RestaurantController::class, 'detail_restaurace'])->name('detail_restaurace');
-
+Route::get('/detail_restaurace/{restaurace}', [DetailRestauraceController::class, 'show'])->name('detail_restaurace.show');
 
 Route::get('/konkretni_restaurace/{typId}', [RestaurantController::class, 'konkretni_restaurace'])->name('konkretni_restaurace');
-
 
 Route::get('/cas', [RestaurantController::class, 'cas'])->name('cas');
 

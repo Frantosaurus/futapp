@@ -18,6 +18,10 @@
     color: white;
     font-weight: bold;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
 }
 
