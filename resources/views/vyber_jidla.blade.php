@@ -23,7 +23,7 @@
         <div class="d-flex justify-content-center align-items-center">
             <button type="button" class="btn btn-outline-light tlacitko" onclick="window.location.href='/cas'"
                 style="margin-right: 30px;">Vrátit se</button>
-            <button type="submit" class="btn btn-outline-light tlacitko">Je mi to jedno</button>
+           <!--  <button type="submit" class="btn btn-outline-light tlacitko">Je mi to jedno</button> -->
         </div>
     </form>
 </section>
