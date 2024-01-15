@@ -18,7 +18,7 @@ class RestaurantController extends Controller
 
     public function zakladni_udaje()
     {
-        $nazevRestaurace = Restaurace::orderBy("typ")->get();
+        $nazevRestaurace = Restaurace::orderBy("typ_id")->get();
         $typJidla = TypyRestauraci::all();
     
         return view('zakladni_udaje', ['typJidla' => $typJidla, 'nazevRestaurace' => $nazevRestaurace]);
@@ -50,6 +50,34 @@ class RestaurantController extends Controller
     {
         return view('cas');
     }
+
+    public function vyber_jidla_z_databaze()
+    {
+        // Načtěte všechny typy restaurací z databáze
+        $typyRestauraci = TypyRestauraci::all();
+    
+        // Předejte data do šablony
+        return view('vyber_jidla_z_databaze', ['typyRestauraci' => $typyRestauraci]);
+    }
+
+    public function konkretni_restaurace($typId)
+{
+    // Získání konkrétních restaurací pro daný typ z databáze
+    $konkretniRestaurace = DB::table('konkretni_restaurace')
+        ->where('typ_id', $typId)
+        ->get();
+
+    // Předání dat na view
+    return view('konkretni_restaurace', compact('konkretniRestaurace'));
+}
+
+public function detailRestaurace($id)
+{
+    $konkretniRestaurace = Restaurace::find($id);
+
+    return view('detail_restaurace', compact('konkretniRestaurace'));
+}
+
 
     public function vyber_jidla()
     {
@@ -97,7 +125,7 @@ class RestaurantController extends Controller
         Cache::put('user_data', $userData, 600);
     
         // Přesměrování na další stránku
-        return redirect()->route('vyber_jidla');
+        return redirect()->route('vyber_jidla_z_databaze');
     }
 
 

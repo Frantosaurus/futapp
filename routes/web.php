@@ -12,6 +12,14 @@ Route::get('/zakladni_udaje', [RestaurantController::class, 'zakladni_udaje']);
 
 Route::get('/vyber_jidla', [RestaurantController::class, 'vyber_jidla'])->name('vyber_jidla');
 
+Route::get('/vyber_jidla_z_databaze', [RestaurantController::class, 'vyber_jidla_z_databaze'])->name('vyber_jidla_z_databaze');
+
+Route::get('/detail_restaurace/{id}', [RestaurantController::class, 'detail_restaurace'])->name('detail_restaurace');
+
+
+Route::get('/konkretni_restaurace/{typId}', [RestaurantController::class, 'konkretni_restaurace'])->name('konkretni_restaurace');
+
+
 Route::get('/cas', [RestaurantController::class, 'cas'])->name('cas');
 
 Route::get('/match', [RestaurantController::class, 'match'])->name('match');

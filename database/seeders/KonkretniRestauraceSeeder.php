@@ -162,14 +162,14 @@ class KonkretniRestauraceSeeder extends Seeder
 
             // Menza
             [
-                'typ_id' => 7,
+                'typ_id' => 8,
                 'nazev' => 'Menza Západočeské univerzity v Plzni - Bory',
                 'mapa' => 'https://www.google.com/maps/@49.7351283,13.3836312,17z',
                 'adresa' => 'Univerzitní 12, 306 14 Plzeň 3',
                 'telefon' => '377 634 880',
             ],
             [
-                'typ_id' => 7,
+                'typ_id' => 8,
                 'nazev' => 'Menza Západočeské univerzity v Plzni - Kollárová',
                 'mapa' => 'https://www.google.com/maps/@49.7476339,13.3827402,17z',
                 'adresa' => 'Kollárova 1239/19, 301 00 Plzeň 3',
@@ -178,14 +178,14 @@ class KonkretniRestauraceSeeder extends Seeder
 
             // Mexické restaurace
             [
-                'typ_id' => 8,
+                'typ_id' => 7,
                 'nazev' => 'La Chica | Casa Mexicana',
                 'mapa' => 'https://www.google.com/maps/@49.743243,13.388059,17z',
                 'adresa' => 'Malá 3, 301 00 Plzeň 3',
                 'telefon' => '605 397 568',
             ],
             [
-                'typ_id' => 8,
+                'typ_id' => 7,
                 'nazev' => "Pancho's",
                 'mapa' => 'https://www.google.com/maps/@49.7531157,13.3848797,17z',
                 'adresa' => 'Slovanská 389, 326 00 Plzeň 2-Slovany',
