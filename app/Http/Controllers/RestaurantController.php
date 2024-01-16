@@ -31,13 +31,6 @@ class RestaurantController extends Controller
             'name' => 'required|max:25',
             'last_name' => 'required|max:25',
             'contact' => 'required|max:25',
-            'den' => 'required',
-            'od_kdy_hours' => 'required',
-            'do_kdy_hours' => 'required',
-            'restaurant_type' => 'required',
-            'restaurant_name' => 'required',
-            
-
         ]);
     
         $uzivatel = new User();
@@ -211,56 +204,4 @@ public function match()
         'peopleWithSameTypeDifferentLocation' => $peopleWithSameTypeDifferentLocation,
     ]);
 }
-    /*
-
-
-     // jednotlivé restaurace
-    public function showRestaurant($restaurantName)
-    {
-        return view($restaurantName);
-    }
-
-
-    //druhy restaurací          (to je zde necháno, kdyby náhodou něco nefungovalo, tak, jak má)
-    public function mexico()
-    {
-        return view('mexico');
-    }
-
-    public function fastfood()
-    {
-        return view('fastfood');
-    }
-
-    public function cina()
-    {
-        return view('cina');
-    }
-
-    public function indie()
-    {
-        return view('indie');
-    }
-
-    public function italie()
-    {
-        return view('italie');
-    }
-
-    public function cesko()
-    {
-        return view('cesko');
-    }
-
-    public function kebab()
-    {
-        return view('kebab');
-    }
-
-    
-    //jednotlivé restuarace
-    public function mekong()
-    {
-        return view('mekong');
-    }*/
 }
