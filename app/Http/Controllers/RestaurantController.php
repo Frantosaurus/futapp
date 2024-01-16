@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Restaurace;
 use App\Models\TypyRestauraci;
 use App\Models\User;
+use App\Models\Pozadavek;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -30,6 +31,12 @@ class RestaurantController extends Controller
             'name' => 'required|max:25',
             'last_name' => 'required|max:25',
             'contact' => 'required|max:25',
+            'den' => 'required',
+            'od_kdy_hours' => 'required',
+            'do_kdy_hours' => 'required',
+            'restaurant_type' => 'required',
+            'restaurant_name' => 'required',
+            
 
         ]);
     
@@ -39,7 +46,6 @@ class RestaurantController extends Controller
         $uzivatel->last_name = $validatedData["last_name"];
         $uzivatel->contact = $validatedData["contact"];
 
-    
         $uzivatel->save();
     
         return redirect("/")->with('mssg', 'Potvrzeno');
