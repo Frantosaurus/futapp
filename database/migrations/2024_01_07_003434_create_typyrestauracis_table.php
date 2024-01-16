@@ -13,9 +13,33 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('typyrestauracis', function (Blueprint $table) {
+        Schema::create('typyrestauraci', function (Blueprint $table) {
             $table->id();
+            $table->string('typ_restaurace');
             $table->timestamps();
+        });
+
+        DB::table('typyrestauraci')->insert([
+            ['typ_restaurace' => 'Asijská restaurace'],
+            ['typ_restaurace' => 'Indická restaurace'],
+            ['typ_restaurace' => 'Česká restaurace'],
+            ['typ_restaurace' => 'Kebab'],
+            ['typ_restaurace' => 'Italská restaurace'],
+            ['typ_restaurace' => 'Fastfood'],
+            ['typ_restaurace' => 'Mexická restaurace'],
+            ['typ_restaurace' => 'Menza'],
+        ]);
+
+        Schema::create('konkretni_restaurace', function (Blueprint $table) {
+            $table->id();
+            $table->unsignedBigInteger('typ_id');
+            $table->string('nazev');
+            $table->string('mapa')->nullable();
+            $table->string('adresa');
+            $table->string('telefon')->nullable();
+            $table->timestamps();
+
+            $table->foreign('typ_id')->references('id')->on('typyrestauraci')->onDelete('cascade');
         });
     }
 
@@ -26,6 +50,7 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('typyrestauracis');
+        Schema::dropIfExists('konkretni_restaurace');
+        Schema::dropIfExists('typyrestauraci');
     }
 };

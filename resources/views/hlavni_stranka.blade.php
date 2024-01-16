@@ -13,7 +13,8 @@
         <br>
         <br>
         <button type="button" class="btn btn-outline-dark btn-lg tlacitko"
-            onclick="window.location.href='/zakladni_udaje'">Jdu do toho!</button>
+            onclick="window.location.href='/zakladni_udaje'">Jdu do toho!</button><br>
+            <button type="button" class="btn btn-outline-dark tlacitko" onclick="window.location.href='/vyber_jidla'">Chci se podívat jaký je výběr</button>
     </div>
 
 </section>

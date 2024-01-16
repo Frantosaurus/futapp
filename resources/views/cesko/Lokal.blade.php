@@ -16,7 +16,7 @@
             </div>
             <div class="col-sm">
                 <div class="podnadpis">
-                    <label><strong>Adresa:</strong> 34, Bezručova 315, Vnitřní Město, 301 00 Plzeň 3</label>
+                    <label><strong>Adresa:</strong> 34, Bezručova 315, Vnitřní Město, 301 00 Plzeň 3<</label>
                     <br>
                     <label><strong>Tel. číslo:</strong> 778 726 191 </label>
                 </div>
