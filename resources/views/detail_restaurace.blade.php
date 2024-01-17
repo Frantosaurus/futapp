@@ -21,8 +21,8 @@
                 </div>
                 <form action="{{ route('celamezipametToCacheAndSaveToDatabase') }}" method="POST">
                     @csrf
-                    <input type="hidden" name="restaurant_name" value="{{ $restaurace->nazev }}">
-                    <input type="hidden" name="restaurant_type" value="{{ $restaurace->typ }}">
+                    <input type="hidden" name="restaurant_name" value="{{ $restaurace->id }}">
+                    <input type="hidden" name="restaurant_type" value="{{ $restaurace->typ_id}}">
                     <div class="d-flex justify-content-center align-items-center">
                         <button type="button" class="btn btn-outline-dark tlacitko" onclick="window.history.back()"
                             style="margin-right: 30px;">Vrátit se</button>

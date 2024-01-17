@@ -43,7 +43,7 @@ return new class extends Migration
             $table->string('od_kdy');
             $table->string('do_kdy');
             $table->unsignedBigInteger('typ_restaurace_id')->nullable(); // Přidej tento řádek
-            $table->unsignedBigInteger('konkretni_restaurace_id')->nullable();
+            $table->unsignedBigInteger ('konkretni_restaurace_id')->nullable();
             $table->timestamps();
     
             $table->foreign('typ_restaurace_id')->references('id')->on('typyrestauraci')->onDelete('cascade');
