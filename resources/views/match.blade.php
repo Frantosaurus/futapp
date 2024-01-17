@@ -6,15 +6,15 @@
         <div class="col-auto">
             <h1 class="title_match">Vaše údaje:</h1>
             <div class="karta_match_prime">
-                <p><strong>Jméno:</strong> {{ $latestUser->name }}</p>
-                <p><strong>Příjmení:</strong> {{ $latestUser->last_name }}</p>
-                <p><strong>Kontakt:</strong> {{ $latestUser->contact }}</p>
-                <p><strong>Den:</strong> {{ \Carbon\Carbon::parse($latestUser->den)->format('d.m.Y') }}</p>
-                <p><strong>Od Kdy:</strong> {{ $latestUser->od_kdy }}</p>
-                <p><strong>Do Kdy:</strong>
-                    {{ $latestUser->do_kdy == 'je_mi_to_jedno' ? 'Je mi to jedno' : $latestUser->do_kdy }}</p>
-                <p><strong>Typ restaurace:</strong> {{ $latestUser->typ_restaurace_id }}</p>
-                <p><strong>Konkrétní restaurace:</strong> {{ $latestUser->konkretni_restaurace_id}}</p>
+            <p><strong>Jméno:</strong> {{ $latestUser->user->name }}</p>
+            <p><strong>Příjmení:</strong> {{ $latestUser->user->last_name }}</p>
+            <p><strong>Kontakt:</strong> {{ $latestUser->user->contact }}</p>
+            <p><strong>Den:</strong> {{ \Carbon\Carbon::parse($latestUser->den)->format('d.m.Y') }}</p>
+            <p><strong>Od Kdy:</strong> {{ $latestUser->od_kdy }}</p>
+            <p><strong>Do Kdy:</strong>
+                {{ $latestUser->do_kdy == 'je_mi_to_jedno' ? 'Je mi to jedno' : $latestUser->do_kdy }}</p>
+            <p><strong>Typ restaurace:</strong> {{ $latestUser->typ_restaurace_id }}</p>
+            <p><strong>Konkrétní restaurace:</strong> {{ $latestUser->konkretni_restaurace_id}}</p><
             </div>
 
             <div class="row">
