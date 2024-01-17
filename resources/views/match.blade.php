@@ -13,8 +13,8 @@
                 <p><strong>Od Kdy:</strong> {{ $latestUser->od_kdy }}</p>
                 <p><strong>Do Kdy:</strong>
                     {{ $latestUser->do_kdy == 'je_mi_to_jedno' ? 'Je mi to jedno' : $latestUser->do_kdy }}</p>
-                <p><strong>Typ restaurace:</strong> {{ $latestUser->restaurant_type }}</p>
-                <p><strong>Konkrétní restaurace:</strong> {{ $latestUser->restaurant_name }}</p>
+                <p><strong>Typ restaurace:</strong> {{ $latestUser->typ_restaurace_id }}</p>
+                <p><strong>Konkrétní restaurace:</strong> {{ $latestUser->konkretni_restaurace_id}}</p>
             </div>
 
             <div class="row">
@@ -30,8 +30,8 @@
                         <p><strong>Od Kdy:</strong> {{ $person->od_kdy }}</p>
                         <p><strong>Do Kdy:</strong>
                             {{ $person->do_kdy == 'je_mi_to_jedno' ? 'Je mi to jedno' : $person->do_kdy }}</p>
-                        <p><strong>Typ restaurace:</strong> {{ $person->restaurant_type }}</p>
-                        <p><strong>Konkrétní restaurace:</strong> {{ $person->restaurant_name }}</p>
+                        <p><strong>Typ restaurace:</strong> {{ $person->typ_restaurace_id }}</p>
+                        <p><strong>Konkrétní restaurace:</strong> {{ $person->konkretni_restaurace_id }}</p>
                     </div>
                     @endforeach
                 </div>
@@ -49,8 +49,8 @@
                         <p><strong>Od Kdy:</strong> {{ $person->od_kdy }}</p>
                         <p><strong>Do Kdy:</strong>
                             {{ $person->do_kdy == 'je_mi_to_jedno' ? 'Je mi to jedno' : $person->do_kdy }}</p>
-                        <p><strong>Typ restaurace:</strong> {{ $person->restaurant_type }}</p>
-                        <p><strong>Konkrétní restaurace:</strong> {{ $person->restaurant_name }}</p>
+                        <p><strong>Typ restaurace:</strong> {{ $person->typ_restaurace_id }}</p>
+                        <p><strong>Konkrétní restaurace:</strong> {{ $person->konkretni_restaurace_id }}</p>
                     </div>
                     @endforeach
                 </div>

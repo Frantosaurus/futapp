@@ -160,29 +160,29 @@ public function detailRestaurace($id)
 
 public function match()
 {
-    $latestUser = User::latest()->first();
+    $latestUser = Pozadavek::latest()->first();
 
     // Přidání časových podmínek pro překrývající se intervaly
-    $peopleWithSameRestaurant = User::where('restaurant_name', $latestUser->restaurant_name)
-        ->where('den', $latestUser->den)
-        ->where(function($query) use ($latestUser) {
-            $query->where(function($q) use ($latestUser) {
-                $q->where('od_kdy', '>=', $latestUser->od_kdy)
-                  ->where('od_kdy', '<=', $latestUser->do_kdy);
-            })
-            ->orWhere(function($q) use ($latestUser) {
-                $q->where('do_kdy', '>=', $latestUser->od_kdy)
-                  ->where('do_kdy', '<=', $latestUser->do_kdy);
-            })
-            ->orWhere(function($q) use ($latestUser) {
-                $q->where('od_kdy', '<=', $latestUser->od_kdy)
-                  ->where('do_kdy', '>=', $latestUser->do_kdy);
-            });
+    $peopleWithSameRestaurant = Pozadavek::where('konkretni_restaurace_id', $latestUser->konkretni_restaurace_id)
+    ->where('den', $latestUser->den)
+    ->where(function($query) use ($latestUser) {
+        $query->where(function($q) use ($latestUser) {
+            $q->where('od_kdy', '>=', $latestUser->od_kdy)
+              ->where('od_kdy', '<=', $latestUser->do_kdy);
+        })
+        ->orWhere(function($q) use ($latestUser) {
+            $q->where('do_kdy', '>=', $latestUser->od_kdy)
+              ->where('do_kdy', '<=', $latestUser->do_kdy);
+        })
+        ->orWhere(function($q) use ($latestUser) {
+            $q->where('od_kdy', '<=', $latestUser->od_kdy)
+              ->where('do_kdy', '>=', $latestUser->do_kdy);
+        });
         })
         ->where('id', '!=', $latestUser->id)
         ->get();
 
-    $peopleWithSameTypeDifferentLocation = User::where('restaurant_type', $latestUser->restaurant_type)
+    $peopleWithSameTypeDifferentLocation = Pozadavek::where('typ_restaurace_id', $latestUser->typ_restaurace_id)
         ->where('den', $latestUser->den)
         ->where(function($query) use ($latestUser) {
             $query->where(function($q) use ($latestUser) {
@@ -198,7 +198,7 @@ public function match()
                   ->where('do_kdy', '>=', $latestUser->do_kdy);
             });
         })
-        ->where('restaurant_name', '!=', $latestUser->restaurant_name)
+        ->where('konkretni_restaurace_id', '!=', $latestUser->konkretni_restaurace_id)
         ->get();
 
     return view('match', [
