@@ -13,7 +13,7 @@
             <p><strong>Od Kdy:</strong> {{ $latestUser->od_kdy }}</p>
             <p><strong>Do Kdy:</strong>
                 {{ $latestUser->do_kdy == 'je_mi_to_jedno' ? 'Je mi to jedno' : $latestUser->do_kdy }}</p>
-            <p><strong>Typ restaurace:</strong> {{ $latestUser->typ_restaurace_id }}</p>
+            <p><strong>Typ restaurace:</strong> {{$latestUser->typRestaurace->typ_restaurace }}
             <p><strong>Konkrétní restaurace:</strong> {{ $latestUser->konkretni_restaurace_id}}</p><
             </div>
 
@@ -25,12 +25,12 @@
                     <div class="karta_match">
                         <p><strong>Jméno:</strong> {{ $person->user->name }}</p>
                         <p><strong>Příjmení:</strong> {{ $person->user->last_name }}</p>
-                        <p><strong>Kontakt:</strong> {{ $latestUser->user->contact }}</p>
+                        <p><strong>Kontakt:</strong> {{ $person->user->contact }}</p>
                         <p><strong>Den:</strong> {{ \Carbon\Carbon::parse($person->den)->format('d.m.Y') }}</p>
                         <p><strong>Od Kdy:</strong> {{ $person->od_kdy }}</p>
                         <p><strong>Do Kdy:</strong>
                             {{ $person->do_kdy == 'je_mi_to_jedno' ? 'Je mi to jedno' : $person->do_kdy }}</p>
-                        <p><strong>Typ restaurace:</strong> {{ $person->typ_restaurace_id }}</p>
+                        <p><strong>Typ restaurace:</strong> {{ $person>typRestaurace->typ_restaurace}}</p>
                         <p><strong>Konkrétní restaurace:</strong> {{ $person->konkretni_restaurace_id }}</p>
                     </div>
                     @endforeach
@@ -44,12 +44,12 @@
                     <div class="karta_match">
                         <p><strong>Jméno:</strong> {{ $person->user->name }}</p>
                         <p><strong>Příjmení:</strong> {{ $person->user->last_name }}</p>
-                        <p><strong>Kontakt:</strong> {{ $latestUser->user->contact }}</p>
+                        <p><strong>Kontakt:</strong> {{ $person->user->contact }}</p>
                         <p><strong>Den:</strong> {{ \Carbon\Carbon::parse($person->den)->format('d.m.Y') }}</p>
                         <p><strong>Od Kdy:</strong> {{ $person->od_kdy }}</p>
                         <p><strong>Do Kdy:</strong>
                             {{ $person->do_kdy == 'je_mi_to_jedno' ? 'Je mi to jedno' : $person->do_kdy }}</p>
-                        <p><strong>Typ restaurace:</strong> {{ $person->typ_restaurace_id }}</p>
+                        <p><strong>Typ restaurace:</strong> {{ $person->typRestaurace->typ_restaurace }}</p>
                         <p><strong>Konkrétní restaurace:</strong> {{ $person->konkretni_restaurace_id }}</p>
                     </div>
                     @endforeach
