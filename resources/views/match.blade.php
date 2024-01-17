@@ -14,7 +14,7 @@
             <p><strong>Do Kdy:</strong>
                 {{ $latestUser->do_kdy == 'je_mi_to_jedno' ? 'Je mi to jedno' : $latestUser->do_kdy }}</p>
             <p><strong>Typ restaurace:</strong> {{$latestUser->typRestaurace->typ_restaurace }}
-            <p><strong>Konkrétní restaurace:</strong> {{ $latestUser->konkretni_restaurace_id}}</p><
+            <p><strong>Konkrétní restaurace:</strong> {{ $latestUser->konkretniRestaurace->nazev }}</p>
             </div>
 
             <div class="row">
@@ -30,8 +30,8 @@
                         <p><strong>Od Kdy:</strong> {{ $person->od_kdy }}</p>
                         <p><strong>Do Kdy:</strong>
                             {{ $person->do_kdy == 'je_mi_to_jedno' ? 'Je mi to jedno' : $person->do_kdy }}</p>
-                        <p><strong>Typ restaurace:</strong> {{ $person>typRestaurace->typ_restaurace}}</p>
-                        <p><strong>Konkrétní restaurace:</strong> {{ $person->konkretni_restaurace_id }}</p>
+                        <p><strong>Typ restaurace:</strong> {{$person->typRestaurace->typ_restaurace }}
+                        <p><strong>Konkrétní restaurace:</strong> {{ $person->konkretniRestaurace->nazev }}</p>
                     </div>
                     @endforeach
                 </div>
@@ -49,8 +49,8 @@
                         <p><strong>Od Kdy:</strong> {{ $person->od_kdy }}</p>
                         <p><strong>Do Kdy:</strong>
                             {{ $person->do_kdy == 'je_mi_to_jedno' ? 'Je mi to jedno' : $person->do_kdy }}</p>
-                        <p><strong>Typ restaurace:</strong> {{ $person->typRestaurace->typ_restaurace }}</p>
-                        <p><strong>Konkrétní restaurace:</strong> {{ $person->konkretni_restaurace_id }}</p>
+                        <p><strong>Typ restaurace:</strong> {{$person->typRestaurace->typ_restaurace }}
+                        <p><strong>Konkrétní restaurace:</strong> {{ $person->konkretniRestaurace->nazev }}</p>
                     </div>
                     @endforeach
                 </div>
