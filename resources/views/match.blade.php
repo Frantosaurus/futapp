@@ -23,9 +23,9 @@
                     <h2 class="nadpis_match">Lidé kteří si vybrali stejnou restauraci jako Vy:</h2>
                     @foreach($peopleWithSameRestaurant as $person)
                     <div class="karta_match">
-                        <p><strong>Jméno:</strong> {{ $person->name }}</p>
-                        <p><strong>Příjmení:</strong> {{ $person->last_name }}</p>
-                        <p><strong>Kontakt:</strong> {{ $latestUser->contact }}</p>
+                        <p><strong>Jméno:</strong> {{ $person->user->name }}</p>
+                        <p><strong>Příjmení:</strong> {{ $person->user->last_name }}</p>
+                        <p><strong>Kontakt:</strong> {{ $latestUser->user->contact }}</p>
                         <p><strong>Den:</strong> {{ \Carbon\Carbon::parse($person->den)->format('d.m.Y') }}</p>
                         <p><strong>Od Kdy:</strong> {{ $person->od_kdy }}</p>
                         <p><strong>Do Kdy:</strong>
@@ -42,9 +42,9 @@
                     </h2>
                     @foreach($peopleWithSameTypeDifferentLocation as $person)
                     <div class="karta_match">
-                        <p><strong>Jméno:</strong> {{ $person->name }}</p>
-                        <p><strong>Příjmení:</strong> {{ $person->last_name }}</p>
-                        <p><strong>Kontakt:</strong> {{ $latestUser->contact }}</p>
+                        <p><strong>Jméno:</strong> {{ $person->user->name }}</p>
+                        <p><strong>Příjmení:</strong> {{ $person->user->last_name }}</p>
+                        <p><strong>Kontakt:</strong> {{ $latestUser->user->contact }}</p>
                         <p><strong>Den:</strong> {{ \Carbon\Carbon::parse($person->den)->format('d.m.Y') }}</p>
                         <p><strong>Od Kdy:</strong> {{ $person->od_kdy }}</p>
                         <p><strong>Do Kdy:</strong>
