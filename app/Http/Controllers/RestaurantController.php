@@ -139,17 +139,20 @@ public function detailRestaurace($id)
     Cache::put('user_data', $userData, 600);
 
     // Uložení dat do databáze
+    $pozadavek = new Pozadavek();
+    $pozadavek->den = $userData['den'] ?? null;
+    $pozadavek->od_kdy = $userData['od_kdy_hours'] ?? null;
+    $pozadavek->do_kdy = $userData['do_kdy_hours'] ?? null;
+    $pozadavek->typ_restaurace_id = $userData['restaurant_type'];
+    $pozadavek->konkretni_restaurace_id = $userData['restaurant_name'];
+    $pozadavek->save();
+
     $uzivatel = new User();
     $uzivatel->name = $userData['name'] ?? null;
     $uzivatel->last_name = $userData['last_name'] ?? null;
     $uzivatel->contact = $userData['contact'] ?? null;
-    $uzivatel->den = $userData['den'] ?? null;
-    $uzivatel->od_kdy = $userData['od_kdy_hours'] ?? null; // Oprava názvu sloupce
-    $uzivatel->do_kdy = $userData['do_kdy_hours'] ?? null; // Oprava názvu sloupce
-    $uzivatel->restaurant_type = $userData['restaurant_type'];
-    $uzivatel->restaurant_name = $userData['restaurant_name'];
+    $uzivatel->pozadavek_id = $pozadavek->id;
     $uzivatel->save();
-
     // Přesměrování na další stránku
     return redirect()->route('match');
 }

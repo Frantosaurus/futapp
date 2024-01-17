@@ -37,18 +37,19 @@ return new class extends Migration
             $table->foreign('typ_id')->references('id')->on('typyrestauraci')->onDelete('cascade');
         });
 
-        Schema::create('pozadavky', function (Blueprint $table) {
+        Schema::create('pozadaveks', function (Blueprint $table) {
             $table->id();
             $table->string('den');
             $table->string('od_kdy');
             $table->string('do_kdy');
-            $table->unsignedBigInteger('typ_restaurace_id')->nullable();
+            $table->unsignedBigInteger('typ_restaurace_id')->nullable(); // Přidej tento řádek
             $table->unsignedBigInteger('konkretni_restaurace_id')->nullable();
             $table->timestamps();
-
+    
             $table->foreign('typ_restaurace_id')->references('id')->on('typyrestauraci')->onDelete('cascade');
             $table->foreign('konkretni_restaurace_id')->references('id')->on('konkretni_restaurace')->onDelete('cascade');
         });
+    
 
         Schema::create('users', function (Blueprint $table) {
             $table->id();
@@ -58,14 +59,14 @@ return new class extends Migration
             $table->unsignedBigInteger('pozadavek_id')->nullable();
             $table->timestamps();
 
-            $table->foreign('pozadavek_id')->references('id')->on('pozadavky')->onDelete('cascade');
+            $table->foreign('pozadavek_id')->references('id')->on('pozadaveks')->onDelete('cascade');
         });
     }
 
     public function down()
     {
         Schema::dropIfExists('users');
-        Schema::dropIfExists('pozadavky');
+        Schema::dropIfExists('pozadaveks');
         Schema::dropIfExists('konkretni_restaurace');
         Schema::dropIfExists('typyrestauraci');
     }
