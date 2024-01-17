@@ -9,7 +9,11 @@
             <div class="row">
                 <div class="col-sm">
                     <div class="google-map">
-                        {!! $restaurace->mapa !!}
+                        <iframe
+                        src="{!! $restaurace->mapa !!}"
+                        width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
                     </div>
                 </div>
                 <div class="col-sm">
@@ -23,7 +27,7 @@
                     @csrf
                     <input type="hidden" name="restaurant_name" value="{{ $restaurace->id }}">
                     <input type="hidden" name="restaurant_type" value="{{ $restaurace->typ_id}}">
-                    <div class="d-flex justify-content-center align-items-center">
+                    <div class="d-flex justify-content-center align-items-right">
                         <button type="button" class="btn btn-outline-dark tlacitko" onclick="window.history.back()"
                             style="margin-right: 30px;">Vrátit se</button>
                         <button type="submit" class="btn btn-outline-dark tlacitko">Pokračovat</button>
