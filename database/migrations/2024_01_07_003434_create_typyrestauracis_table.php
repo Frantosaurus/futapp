@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('typyrestauraci', function (Blueprint $table) {
@@ -41,15 +36,37 @@ return new class extends Migration
 
             $table->foreign('typ_id')->references('id')->on('typyrestauraci')->onDelete('cascade');
         });
+
+        Schema::create('pozadaveks', function (Blueprint $table) {
+            $table->id();
+            $table->string('den');
+            $table->string('od_kdy');
+            $table->string('do_kdy');
+            $table->unsignedBigInteger('typ_restaurace_id')->nullable(); // Přidej tento řádek
+            $table->unsignedBigInteger ('konkretni_restaurace_id')->nullable();
+            $table->timestamps();
+    
+            $table->foreign('typ_restaurace_id')->references('id')->on('typyrestauraci')->onDelete('cascade');
+            $table->foreign('konkretni_restaurace_id')->references('id')->on('konkretni_restaurace')->onDelete('cascade');
+        });
+    
+
+        Schema::create('users', function (Blueprint $table) {
+            $table->id();
+            $table->string('name');
+            $table->string('last_name');
+            $table->string('contact');
+            $table->unsignedBigInteger('pozadavek_id')->nullable();
+            $table->timestamps();
+
+            $table->foreign('pozadavek_id')->references('id')->on('pozadaveks')->onDelete('cascade');
+        });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
+        Schema::dropIfExists('users');
+        Schema::dropIfExists('pozadaveks');
         Schema::dropIfExists('konkretni_restaurace');
         Schema::dropIfExists('typyrestauraci');
     }

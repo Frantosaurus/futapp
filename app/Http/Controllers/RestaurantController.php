@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Restaurace;
 use App\Models\TypyRestauraci;
 use App\Models\User;
+use App\Models\Pozadavek;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\DB;
@@ -30,7 +31,6 @@ class RestaurantController extends Controller
             'name' => 'required|max:25',
             'last_name' => 'required|max:25',
             'contact' => 'required|max:25',
-
         ]);
     
         $uzivatel = new User();
@@ -39,7 +39,6 @@ class RestaurantController extends Controller
         $uzivatel->last_name = $validatedData["last_name"];
         $uzivatel->contact = $validatedData["contact"];
 
-    
         $uzivatel->save();
     
         return redirect("/")->with('mssg', 'Potvrzeno');
@@ -140,17 +139,20 @@ public function detailRestaurace($id)
     Cache::put('user_data', $userData, 600);
 
     // Uložení dat do databáze
+    $pozadavek = new Pozadavek();
+    $pozadavek->den = $userData['den'] ?? null;
+    $pozadavek->od_kdy = $userData['od_kdy_hours'] ?? null;
+    $pozadavek->do_kdy = $userData['do_kdy_hours'] ?? null;
+    $pozadavek->typ_restaurace_id = $userData['restaurant_type'];
+    $pozadavek->konkretni_restaurace_id = $userData['restaurant_name'];
+    $pozadavek->save();
+
     $uzivatel = new User();
     $uzivatel->name = $userData['name'] ?? null;
     $uzivatel->last_name = $userData['last_name'] ?? null;
     $uzivatel->contact = $userData['contact'] ?? null;
-    $uzivatel->den = $userData['den'] ?? null;
-    $uzivatel->od_kdy = $userData['od_kdy_hours'] ?? null; // Oprava názvu sloupce
-    $uzivatel->do_kdy = $userData['do_kdy_hours'] ?? null; // Oprava názvu sloupce
-    $uzivatel->restaurant_type = $userData['restaurant_type'];
-    $uzivatel->restaurant_name = $userData['restaurant_name'];
+    $uzivatel->pozadavek_id = $pozadavek->id;
     $uzivatel->save();
-
     // Přesměrování na další stránku
     return redirect()->route('match');
 }
@@ -158,29 +160,29 @@ public function detailRestaurace($id)
 
 public function match()
 {
-    $latestUser = User::latest()->first();
+    $latestUser = Pozadavek::latest()->first();
 
     // Přidání časových podmínek pro překrývající se intervaly
-    $peopleWithSameRestaurant = User::where('restaurant_name', $latestUser->restaurant_name)
-        ->where('den', $latestUser->den)
-        ->where(function($query) use ($latestUser) {
-            $query->where(function($q) use ($latestUser) {
-                $q->where('od_kdy', '>=', $latestUser->od_kdy)
-                  ->where('od_kdy', '<=', $latestUser->do_kdy);
-            })
-            ->orWhere(function($q) use ($latestUser) {
-                $q->where('do_kdy', '>=', $latestUser->od_kdy)
-                  ->where('do_kdy', '<=', $latestUser->do_kdy);
-            })
-            ->orWhere(function($q) use ($latestUser) {
-                $q->where('od_kdy', '<=', $latestUser->od_kdy)
-                  ->where('do_kdy', '>=', $latestUser->do_kdy);
-            });
+    $peopleWithSameRestaurant = Pozadavek::where('konkretni_restaurace_id', $latestUser->konkretni_restaurace_id)
+    ->where('den', $latestUser->den)
+    ->where(function($query) use ($latestUser) {
+        $query->where(function($q) use ($latestUser) {
+            $q->where('od_kdy', '>=', $latestUser->od_kdy)
+              ->where('od_kdy', '<=', $latestUser->do_kdy);
+        })
+        ->orWhere(function($q) use ($latestUser) {
+            $q->where('do_kdy', '>=', $latestUser->od_kdy)
+              ->where('do_kdy', '<=', $latestUser->do_kdy);
+        })
+        ->orWhere(function($q) use ($latestUser) {
+            $q->where('od_kdy', '<=', $latestUser->od_kdy)
+              ->where('do_kdy', '>=', $latestUser->do_kdy);
+        });
         })
         ->where('id', '!=', $latestUser->id)
         ->get();
 
-    $peopleWithSameTypeDifferentLocation = User::where('restaurant_type', $latestUser->restaurant_type)
+    $peopleWithSameTypeDifferentLocation = Pozadavek::where('typ_restaurace_id', $latestUser->typ_restaurace_id)
         ->where('den', $latestUser->den)
         ->where(function($query) use ($latestUser) {
             $query->where(function($q) use ($latestUser) {
@@ -196,7 +198,7 @@ public function match()
                   ->where('do_kdy', '>=', $latestUser->do_kdy);
             });
         })
-        ->where('restaurant_name', '!=', $latestUser->restaurant_name)
+        ->where('konkretni_restaurace_id', '!=', $latestUser->konkretni_restaurace_id)
         ->get();
 
     return view('match', [
@@ -205,56 +207,4 @@ public function match()
         'peopleWithSameTypeDifferentLocation' => $peopleWithSameTypeDifferentLocation,
     ]);
 }
-    /*
-
-
-     // jednotlivé restaurace
-    public function showRestaurant($restaurantName)
-    {
-        return view($restaurantName);
-    }
-
-
-    //druhy restaurací          (to je zde necháno, kdyby náhodou něco nefungovalo, tak, jak má)
-    public function mexico()
-    {
-        return view('mexico');
-    }
-
-    public function fastfood()
-    {
-        return view('fastfood');
-    }
-
-    public function cina()
-    {
-        return view('cina');
-    }
-
-    public function indie()
-    {
-        return view('indie');
-    }
-
-    public function italie()
-    {
-        return view('italie');
-    }
-
-    public function cesko()
-    {
-        return view('cesko');
-    }
-
-    public function kebab()
-    {
-        return view('kebab');
-    }
-
-    
-    //jednotlivé restuarace
-    public function mekong()
-    {
-        return view('mekong');
-    }*/
 }

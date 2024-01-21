@@ -19,7 +19,7 @@ class KonkretniRestauraceSeeder extends Seeder
             [
                 'typ_id' => 1,
                 'nazev' => 'Chopstix',
-                'mapa' => 'https://www.google.com/maps/@49.7453561,13.4044427,14z?entry=ttu', // Odkaz nefunguje, příliš dlouhý
+                'mapa' => 'https://bit.ly/48Ce3CX',  //odkaz zkrácen přes bitly - bohužel free je jen pár použití
                 'adresa' => 'Husova 786/19, 301 00 Plzeň 3-Jižní Předměstí',
                 'telefon' => '608 266 779',
             ],
